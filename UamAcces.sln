@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UamAcces", "UamAcces.csproj", "{436FC90E-9FC6-4F74-990E-C9BE19A15FCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{436FC90E-9FC6-4F74-990E-C9BE19A15FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{436FC90E-9FC6-4F74-990E-C9BE19A15FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{436FC90E-9FC6-4F74-990E-C9BE19A15FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{436FC90E-9FC6-4F74-990E-C9BE19A15FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F27491D2-E5F5-457C-B35A-F4697238EF85}
+	EndGlobalSection
+EndGlobal

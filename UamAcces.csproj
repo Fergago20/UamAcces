@@ -55,16 +55,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Formularios\Ingresantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formularios\Ingresantes.Designer.cs">
+      <DependentUpon>Ingresantes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Inicio Sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inicio Sesion.Designer.cs">
+      <DependentUpon>Inicio Sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Ingresantes.resx">
+      <DependentUpon>Ingresantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inicio Sesion.resx">
+      <DependentUpon>Inicio Sesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

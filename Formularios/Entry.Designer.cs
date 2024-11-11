@@ -1,6 +1,6 @@
 ﻿namespace UamAcces.Formularios
 {
-    partial class Ingresantes
+    partial class Entry
     {
         /// <summary>
         /// Required designer variable.

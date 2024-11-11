@@ -9,13 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UamAcces
+namespace UamAcces.Formularios
 {
-    public partial class Form1 : MaterialForm
+    public partial class Input : MaterialForm
     {
-        public Form1()
+        public Input()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 login1 = new Form1();
+            login1.ShowDialog();
         }
     }
 }

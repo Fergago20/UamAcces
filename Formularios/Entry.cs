@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace UamAcces.Formularios
 {
-    public partial class Ingresantes : MaterialForm
+    public partial class Entry : MaterialForm
     {
-        public Ingresantes()
+        public Entry()
         {
             InitializeComponent();
             timer1.Enabled = true;

@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UamAcces.Formularios;
-using UamAcces.models;
 
 namespace UamAcces.models
 {
-    internal class Administrador : Usuario
+    internal class Administrator : User
     {
-       public Administrador()
+        public Administrator()
         {
-            
+            CIF = 432343;
+            Password = 556342;
+            Role = "Trabajador";
         }
-        
     }
 }

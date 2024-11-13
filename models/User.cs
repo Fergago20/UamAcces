@@ -15,6 +15,7 @@ namespace UamAcces.models
         public DateTime Exit {  get; set; }
         public string EntryType {  get; set; }
         public int EntryPath {  get; set; }
+        public string Facultad {  get; set; }
         public bool Validar(int cif, int password)
         {
             return cif == CIF && password == Password;

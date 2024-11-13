@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UamAcces.Formularios;
 using UamAcces.models;
 
 namespace UamAcces
@@ -28,7 +29,12 @@ namespace UamAcces
                 int password= int.Parse(tbPassword.Text);
                 if (administrator.Validar(cif, password)) 
                 { 
-
+                    AdministratorUi administratorui = new AdministratorUi();
+                    administratorui.ShowDialog();
+                }else
+                {
+                    MessageBox.Show("Contraseña o CIF incorrecto", "Error de datos", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }catch (Exception ex) 
             {

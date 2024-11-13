@@ -11,18 +11,11 @@ using System.Windows.Forms;
 
 namespace UamAcces.Formularios
 {
-    public partial class Entry : MaterialForm
+    public partial class AddUser : MaterialForm
     {
-        public Entry()
+        public AddUser()
         {
             InitializeComponent();
-            timer1.Enabled = true;
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblHora.Text = "Hora: ";
-            lblHora.Text += DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

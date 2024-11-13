@@ -11,23 +11,16 @@ using System.Windows.Forms;
 
 namespace UamAcces.Formularios
 {
-    public partial class Input : MaterialForm
+    public partial class AdministratorUi : MaterialForm
     {
-        public Input()
+        public AdministratorUi()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btmHistorial_Click(object sender, EventArgs e)
         {
-            Form1 login1 = new Form1();
-            login1.ShowDialog();
-        }
 
-        private void btmIngresar_Click(object sender, EventArgs e)
-        {
-            Login2 login2 = new Login2();
-            login2.ShowDialog();
         }
     }
 }

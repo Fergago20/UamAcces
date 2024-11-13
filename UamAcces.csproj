@@ -39,6 +39,24 @@
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -55,11 +73,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\AdministratorUi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdministratorUi.Designer.cs">
+      <DependentUpon>AdministratorUi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Entry.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Entry.Designer.cs">
       <DependentUpon>Entry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Exit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Exit.Designer.cs">
+      <DependentUpon>Exit.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Login1.cs">
       <SubType>Form</SubType>
@@ -73,19 +109,56 @@
     <Compile Include="Formularios\Input.Designer.cs">
       <DependentUpon>Input.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Login2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login2.Designer.cs">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Report1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Report1.Designer.cs">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FinalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FinalReport.Designer.cs">
+      <DependentUpon>FinalReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\Administration.cs" />
     <Compile Include="models\Administrator.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\AdministratorUi.resx">
+      <DependentUpon>AdministratorUi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Exit.resx">
+      <DependentUpon>Exit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Login1.resx">
       <DependentUpon>Login1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Input.resx">
       <DependentUpon>Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login2.resx">
+      <DependentUpon>Login2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Report1.resx">
+      <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FinalReport.resx">
+      <DependentUpon>FinalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -95,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -109,6 +183,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Referencias\Referencias.txt" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\cerrar-sesion.png" />
+    <None Include="Resources\reloj-de-salida.png" />
+    <None Include="Resources\puerta-principal.png" />
+    <None Include="Resources\borrar-usuario.png" />
+    <None Include="Resources\perfil-del-usuario.png" />
+    <None Include="Resources\datos.png" />
+    <None Include="Resources\agregar-usuario %281%29.png" />
+    <None Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\formulario-de-llenado.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\usuario %281%29.png" />
+    <None Include="Resources\usuario.png" />
+    <None Include="Resources\trabajo-en-equipo %281%29.png" />
+    <None Include="Resources\trabajo-en-equipo.png" />
+    <None Include="Resources\calendario.gif" />
+    <None Include="Resources\usuario.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

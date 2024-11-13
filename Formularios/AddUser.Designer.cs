@@ -31,18 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUser));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TbCif = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TbNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TbApellido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.Rol = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CbFaculty = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -51,6 +48,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CbRole = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TbMotivo = new System.Windows.Forms.TextBox();
+            this.TbPassword = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,124 +62,85 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(340, 82);
+            this.label1.Location = new System.Drawing.Point(340, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 24);
+            this.label1.Size = new System.Drawing.Size(207, 24);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Agregue un usuario";
+            this.label1.Text = "Administrar usuarios";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(201, 142);
+            this.label2.Location = new System.Drawing.Point(201, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.Size = new System.Drawing.Size(36, 19);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Nombre:";
+            this.label2.Text = "CIF";
             // 
-            // textBox1
+            // TbCif
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(292, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 27);
-            this.textBox1.TabIndex = 14;
+            this.TbCif.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbCif.Location = new System.Drawing.Point(309, 126);
+            this.TbCif.Name = "TbCif";
+            this.TbCif.Size = new System.Drawing.Size(201, 27);
+            this.TbCif.TabIndex = 14;
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 548);
+            this.splitter1.Size = new System.Drawing.Size(3, 597);
             this.splitter1.TabIndex = 15;
             this.splitter1.TabStop = false;
             // 
-            // textBox2
+            // TbNombre
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(292, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(201, 27);
-            this.textBox2.TabIndex = 17;
+            this.TbNombre.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbNombre.Location = new System.Drawing.Point(309, 224);
+            this.TbNombre.Name = "TbNombre";
+            this.TbNombre.Size = new System.Drawing.Size(201, 27);
+            this.TbNombre.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(201, 196);
+            this.label3.Location = new System.Drawing.Point(201, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Apellido";
+            this.label3.Text = "Nombre";
             // 
-            // textBox3
+            // TbApellido
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(292, 253);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(201, 27);
-            this.textBox3.TabIndex = 19;
+            this.TbApellido.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbApellido.Location = new System.Drawing.Point(309, 281);
+            this.TbApellido.Name = "TbApellido";
+            this.TbApellido.Size = new System.Drawing.Size(201, 27);
+            this.TbApellido.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(201, 253);
+            this.label4.Location = new System.Drawing.Point(201, 281);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 19);
+            this.label4.Size = new System.Drawing.Size(66, 19);
             this.label4.TabIndex = 18;
-            this.label4.Text = "CIF";
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(312, 344);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(107, 23);
-            this.radioButton3.TabIndex = 23;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Trabajador";
-            this.radioButton3.UseVisualStyleBackColor = false;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(176, 344);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(91, 23);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Docente";
-            this.radioButton2.UseVisualStyleBackColor = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(34, 344);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(106, 23);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Estudiante";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.label4.Text = "Apellido";
             // 
             // Rol
             // 
             this.Rol.AutoSize = true;
             this.Rol.BackColor = System.Drawing.Color.White;
-            this.Rol.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rol.Location = new System.Drawing.Point(30, 290);
+            this.Rol.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.Rol.Location = new System.Drawing.Point(201, 336);
             this.Rol.Name = "Rol";
-            this.Rol.Size = new System.Drawing.Size(37, 21);
+            this.Rol.Size = new System.Drawing.Size(32, 19);
             this.Rol.TabIndex = 20;
             this.Rol.Text = "Rol";
             // 
@@ -185,28 +148,28 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 395);
+            this.label5.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.label5.Location = new System.Drawing.Point(201, 448);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 21);
+            this.label5.Size = new System.Drawing.Size(71, 19);
             this.label5.TabIndex = 24;
             this.label5.Text = "Facultad";
             // 
-            // comboBox1
+            // CbFaculty
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(135, 395);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(197, 25);
-            this.comboBox1.TabIndex = 25;
+            this.CbFaculty.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbFaculty.FormattingEnabled = true;
+            this.CbFaculty.Location = new System.Drawing.Point(309, 448);
+            this.CbFaculty.Name = "CbFaculty";
+            this.CbFaculty.Size = new System.Drawing.Size(201, 25);
+            this.CbFaculty.TabIndex = 25;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(38, 451);
+            this.label6.Location = new System.Drawing.Point(37, 504);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(265, 19);
             this.label6.TabIndex = 27;
@@ -217,7 +180,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(38, 488);
+            this.label7.Location = new System.Drawing.Point(37, 541);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(681, 19);
             this.label7.TabIndex = 28;
@@ -228,7 +191,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.Image = global::UamAcces.Properties.Resources.borrar_usuario;
-            this.button4.Location = new System.Drawing.Point(560, 373);
+            this.button4.Location = new System.Drawing.Point(583, 373);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 73);
             this.button4.TabIndex = 31;
@@ -238,7 +201,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.Image = global::UamAcces.Properties.Resources.perfil_del_usuario;
-            this.button3.Location = new System.Drawing.Point(560, 297);
+            this.button3.Location = new System.Drawing.Point(583, 297);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 70);
             this.button3.TabIndex = 30;
@@ -248,7 +211,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.Image = global::UamAcces.Properties.Resources.datos;
-            this.button2.Location = new System.Drawing.Point(560, 206);
+            this.button2.Location = new System.Drawing.Point(583, 206);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 83);
             this.button2.TabIndex = 29;
@@ -258,11 +221,12 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.Image = global::UamAcces.Properties.Resources.agregar_usuario__1_;
-            this.button1.Location = new System.Drawing.Point(560, 127);
+            this.button1.Location = new System.Drawing.Point(583, 127);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 73);
             this.button1.TabIndex = 26;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -283,11 +247,61 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // CbRole
+            // 
+            this.CbRole.FormattingEnabled = true;
+            this.CbRole.Location = new System.Drawing.Point(309, 333);
+            this.CbRole.Name = "CbRole";
+            this.CbRole.Size = new System.Drawing.Size(201, 24);
+            this.CbRole.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.label8.Location = new System.Drawing.Point(201, 393);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 19);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Motivo (Externo)";
+            // 
+            // TbMotivo
+            // 
+            this.TbMotivo.Location = new System.Drawing.Point(352, 393);
+            this.TbMotivo.Name = "TbMotivo";
+            this.TbMotivo.Size = new System.Drawing.Size(158, 22);
+            this.TbMotivo.TabIndex = 35;
+            // 
+            // TbPassword
+            // 
+            this.TbPassword.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbPassword.Location = new System.Drawing.Point(309, 173);
+            this.TbPassword.Name = "TbPassword";
+            this.TbPassword.Size = new System.Drawing.Size(201, 27);
+            this.TbPassword.TabIndex = 37;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(201, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 19);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Contraseña";
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 548);
+            this.ClientSize = new System.Drawing.Size(871, 597);
+            this.Controls.Add(this.TbPassword);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.TbMotivo);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.CbRole);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -295,18 +309,15 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CbFaculty);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.Rol);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TbApellido);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TbNombre);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TbCif);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AddUser";
@@ -321,18 +332,15 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TbCif;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TbNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TbApellido;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label Rol;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbFaculty;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -341,5 +349,10 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox CbRole;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TbMotivo;
+        private System.Windows.Forms.TextBox TbPassword;
+        private System.Windows.Forms.Label label9;
     }
 }

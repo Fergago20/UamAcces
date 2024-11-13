@@ -1,4 +1,5 @@
-﻿using MaterialSkin.Controls;
+﻿using MaterialSkin;
+using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,17 @@ namespace UamAcces.Formularios
         {
             Exit exit = new Exit();
             exit.ShowDialog();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 5))
+            {
+                e.Graphics.DrawRectangle(pen, 0, 0, 
+                    this.Width - 1, this.Height - 1);
+            }
         }
     }
 }

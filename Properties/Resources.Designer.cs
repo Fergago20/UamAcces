@@ -121,6 +121,22 @@ namespace UamAcces.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a FIA
+        ///FCAE
+        ///FCM
+        ///FO
+        ///FCJH
+        ///FMDC
+        ///UAM COLLEGE
+        ///Posgrado.
+        /// </summary>
+        internal static string Facultades {
+            get {
+                return ResourceManager.GetString("Facultades", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap formulario_de_llenado {
@@ -157,6 +173,18 @@ namespace UamAcces.Properties {
             get {
                 object obj = ResourceManager.GetObject("reloj_de_salida", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Alumno
+        ///Docente
+        ///Trabajador
+        ///Externo.
+        /// </summary>
+        internal static string Roles {
+            get {
+                return ResourceManager.GetString("Roles", resourceCulture);
             }
         }
         

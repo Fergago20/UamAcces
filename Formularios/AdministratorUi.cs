@@ -35,5 +35,15 @@ namespace UamAcces.Formularios
             AddUser user = new AddUser();
             user.ShowDialog();
         }
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 5))
+            {
+                e.Graphics.DrawRectangle(pen, 0, 0,
+                    this.Width - 1, this.Height - 1);
+            }
+        }
     }
 }

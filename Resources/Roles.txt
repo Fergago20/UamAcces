@@ -1,0 +1,4 @@
+Alumno
+Docente
+Trabajador
+Externo

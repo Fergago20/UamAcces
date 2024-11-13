@@ -56,7 +56,7 @@
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(284, 85);
+            this.materialLabel1.Location = new System.Drawing.Point(223, 81);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(289, 24);
@@ -70,7 +70,7 @@
             this.lblHora.Depth = 0;
             this.lblHora.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblHora.Location = new System.Drawing.Point(232, 167);
+            this.lblHora.Location = new System.Drawing.Point(223, 129);
             this.lblHora.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(54, 19);
@@ -84,7 +84,7 @@
             this.lblDia.Depth = 0;
             this.lblDia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDia.Location = new System.Drawing.Point(232, 254);
+            this.lblDia.Location = new System.Drawing.Point(223, 165);
             this.lblDia.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblDia.Name = "lblDia";
             this.lblDia.Size = new System.Drawing.Size(45, 19);
@@ -98,7 +98,7 @@
             // button1
             // 
             this.button1.Image = global::UamAcces.Properties.Resources.reloj_de_salida;
-            this.button1.Location = new System.Drawing.Point(389, 387);
+            this.button1.Location = new System.Drawing.Point(309, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 88);
             this.button1.TabIndex = 11;
@@ -129,7 +129,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(190, 308);
+            this.radioButton1.Location = new System.Drawing.Point(227, 230);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(86, 21);
             this.radioButton1.TabIndex = 13;
@@ -142,12 +142,12 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.BackColor = System.Drawing.Color.White;
             this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(35, 307);
+            this.materialLabel2.Location = new System.Drawing.Point(223, 198);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(121, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(128, 19);
             this.materialLabel2.TabIndex = 14;
             this.materialLabel2.Text = "Tipo de Acceso";
             // 
@@ -156,7 +156,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(300, 308);
+            this.radioButton2.Location = new System.Drawing.Point(227, 266);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(88, 21);
             this.radioButton2.TabIndex = 15;
@@ -166,7 +166,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(300, 345);
+            this.textBox1.Location = new System.Drawing.Point(282, 306);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 22);
             this.textBox1.TabIndex = 16;
@@ -176,12 +176,12 @@
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.BackColor = System.Drawing.Color.White;
             this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(241, 347);
+            this.materialLabel4.Location = new System.Drawing.Point(223, 308);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(45, 17);
+            this.materialLabel4.Size = new System.Drawing.Size(50, 19);
             this.materialLabel4.TabIndex = 17;
             this.materialLabel4.Text = "Placa";
             // 
@@ -190,7 +190,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(633, 309);
+            this.radioButton3.Location = new System.Drawing.Point(368, 348);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(37, 21);
             this.radioButton3.TabIndex = 20;
@@ -203,12 +203,12 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.BackColor = System.Drawing.Color.White;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.materialLabel5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(488, 308);
+            this.materialLabel5.Location = new System.Drawing.Point(223, 347);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(67, 20);
+            this.materialLabel5.Size = new System.Drawing.Size(71, 19);
             this.materialLabel5.TabIndex = 19;
             this.materialLabel5.Text = "Entrada";
             // 
@@ -217,7 +217,7 @@
             this.radioButton4.AutoSize = true;
             this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(574, 309);
+            this.radioButton4.Location = new System.Drawing.Point(309, 348);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(37, 21);
             this.radioButton4.TabIndex = 18;
@@ -229,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 498);
+            this.ClientSize = new System.Drawing.Size(645, 506);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.radioButton4);

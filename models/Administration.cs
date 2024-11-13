@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,8 @@ namespace UamAcces.models
 {
     internal class Administration
     {
+        public const string Registro = "Registro";
+        
         List<User> users=new List<User>();
 
         public void Change(List<User> use)
@@ -42,6 +45,8 @@ namespace UamAcces.models
 
             Writer.Write(user.CIF);
             Writer.Write(user.Role);
+            Writer.Write(user.Name);
+            Writer.Write(user.LastName);
             Writer.Write(user.Entry.Ticks);
             Writer.Write(user.Exit.Ticks);
             Writer.Write(user.EntryType);
@@ -49,10 +54,10 @@ namespace UamAcces.models
             Writer.Close();
         }
 
-        public List<User> ReadFile(string tipo)
+        public List<User> ReadFile()
         {
             List<User> users = new List<User>();
-            FileStream ReadFile = new FileStream(tipo, FileMode.Open, FileAccess.Read);
+            FileStream ReadFile = new FileStream(Registro, FileMode.Open, FileAccess.Read);
             BinaryReader Reader = new BinaryReader(ReadFile);
 
             User user = new User();
@@ -72,9 +77,9 @@ namespace UamAcces.models
             return users;
         }
 
-        public void Update(int cif,DateTime exit, string tipo)
+        public void Update(int cif,DateTime exit)
         {
-            FileStream File = new FileStream(tipo, FileMode.Open, FileAccess.ReadWrite);
+            FileStream File = new FileStream(Registro, FileMode.Open, FileAccess.ReadWrite);
             BinaryWriter Writer = new BinaryWriter(File);
             BinaryReader Reader = new BinaryReader(File);
 
@@ -103,6 +108,30 @@ namespace UamAcces.models
             }
             Reader.Close();
             Writer.Close();
+        }
+
+        public bool DataVerification(string file, int value, string type)
+        {
+            List<User> users = ReadFile(file);
+
+            if (type == "cif")
+            {
+                foreach (User user in users)
+                {
+                    if(user.CIF==value) return true;
+                }
+                return false;
+            }
+
+            if (type == "pasword")
+            {
+                foreach(User user in users)
+                {
+                    if(user.Password==value) return true;
+                }
+                return false;
+            }
+            return false ;
         }
 
 

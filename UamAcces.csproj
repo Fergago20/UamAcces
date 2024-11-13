@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="models\Administration.cs" />
     <Compile Include="models\Administrator.cs" />
+    <Compile Include="models\Entrant.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +197,8 @@
     <None Include="Resources\agregar-usuario %281%29.png" />
     <None Include="Resources\agregar-usuario.png" />
     <None Include="Resources\formulario-de-llenado.png" />
+    <None Include="Resources\Facultades.txt" />
+    <None Include="Resources\Roles.txt" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -23,6 +23,13 @@ namespace UamAcces.Formularios
         {
             lblHora.Text = "Hora: ";
             lblHora.Text += DateTime.Now.ToString("hh:mm:ss tt");
+            lblDia.Text = $"Día {DateTime.Today.ToString("dd/MM/yyyy")}";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Exit exit = new Exit();
+            exit.ShowDialog();
         }
     }
 }

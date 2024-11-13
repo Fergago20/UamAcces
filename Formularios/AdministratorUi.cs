@@ -20,7 +20,20 @@ namespace UamAcces.Formularios
 
         private void btmHistorial_Click(object sender, EventArgs e)
         {
+            Report1 report = new Report1();
+            report.ShowDialog();
+        }
 
+        private void btmIngresados_Click(object sender, EventArgs e)
+        {
+            FinalReport final = new FinalReport();
+            final.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddUser user = new AddUser();
+            user.ShowDialog();
         }
     }
 }

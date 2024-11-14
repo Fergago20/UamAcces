@@ -10,17 +10,17 @@ namespace UamAcces.models
 {
     internal class Administration
     {
-        public const string Registro = "Registro";
+        public const string Registro = "Registro.dat";
         
-        List<User> users=new List<User>();
+        List<Entrant> users=new List<Entrant>();
 
-        public void Change(List<User> use)
+        public void Change(List<Entrant> use)
         {
             users.Clear();
             users.AddRange(use);
         }
 
-        public void Add(User user)
+        public void Add(Entrant user)
         {
             users.Add(user);
         }
@@ -36,11 +36,11 @@ namespace UamAcces.models
             }
         }
 
-        public List<User> GetUsers() { return users; }
+        public List<Entrant> GetUsers() { return users; }
 
-        public void SaveFile(User user, string tipo)
+        public void SaveFile(Entrant user)
         {
-            FileStream WriterFile = new FileStream(tipo, FileMode.Append, FileAccess.Write);
+            FileStream WriterFile = new FileStream(Registro, FileMode.Append, FileAccess.Write);
             BinaryWriter Writer = new BinaryWriter(WriterFile);
 
             Writer.Write(user.CIF);
@@ -54,13 +54,13 @@ namespace UamAcces.models
             Writer.Close();
         }
 
-        public List<User> ReadFile()
+        public List<Entrant> ReadFile()
         {
-            List<User> users = new List<User>();
+            List<Entrant> users = new List<Entrant>();
             FileStream ReadFile = new FileStream(Registro, FileMode.Open, FileAccess.Read);
             BinaryReader Reader = new BinaryReader(ReadFile);
 
-            User user = new User();
+            Entrant user = new Entrant();
             while(ReadFile.Position != ReadFile.Length)
             {
                 user.CIF = Reader.ReadInt32();
@@ -83,7 +83,7 @@ namespace UamAcces.models
             BinaryWriter Writer = new BinaryWriter(File);
             BinaryReader Reader = new BinaryReader(File);
 
-            User user = new User();
+            Entrant user = new Entrant();
             while (File.Position != File.Length)
             {
                 user.CIF = Reader.ReadInt32();
@@ -110,13 +110,13 @@ namespace UamAcces.models
             Writer.Close();
         }
 
-        public bool DataVerification(string file, int value, string type)
+        public bool DataVerification(int value, string type)
         {
-            List<User> users = ReadFile(file);
+            List<Entrant> users = ReadFile();
 
             if (type == "cif")
             {
-                foreach (User user in users)
+                foreach (Entrant user in users)
                 {
                     if(user.CIF==value) return true;
                 }
@@ -125,7 +125,7 @@ namespace UamAcces.models
 
             if (type == "pasword")
             {
-                foreach(User user in users)
+                foreach(Entrant user in users)
                 {
                     if(user.Password==value) return true;
                 }

@@ -6,9 +6,20 @@ using System.Threading.Tasks;
 
 namespace UamAcces.models
 {
-    internal class Entrant
+    internal class Entrant : User
     {
-        public string Name {  get; set; }
-        public string Description { get; set; }
+        
+      
+        public DateTime Entry {  get; set; }
+        public DateTime Exit {  get; set; }
+        public string EntryType {  get; set; }
+        public int EntryPath {  get; set; }
+       
+        public bool Validar(int cif, int password)
+        {
+            return cif == CIF && password == Password;
+        }
+        
+        
     }
 }

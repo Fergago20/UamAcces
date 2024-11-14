@@ -33,24 +33,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TbCif = new System.Windows.Forms.TextBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.TbNombre = new System.Windows.Forms.TextBox();
+            this.TbName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.TbApellido = new System.Windows.Forms.TextBox();
+            this.TbLastName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Rol = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CbFaculty = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtmDelete = new System.Windows.Forms.Button();
+            this.BtmUpdate = new System.Windows.Forms.Button();
+            this.BtmLook = new System.Windows.Forms.Button();
+            this.BtmAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CbRole = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.TbMotivo = new System.Windows.Forms.TextBox();
+            this.TbReason = new System.Windows.Forms.TextBox();
             this.TbPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(340, 64);
+            this.label1.Location = new System.Drawing.Point(340, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(207, 24);
             this.label1.TabIndex = 12;
@@ -95,13 +95,13 @@
             this.splitter1.TabIndex = 15;
             this.splitter1.TabStop = false;
             // 
-            // TbNombre
+            // TbName
             // 
-            this.TbNombre.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbNombre.Location = new System.Drawing.Point(309, 224);
-            this.TbNombre.Name = "TbNombre";
-            this.TbNombre.Size = new System.Drawing.Size(201, 27);
-            this.TbNombre.TabIndex = 17;
+            this.TbName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbName.Location = new System.Drawing.Point(309, 224);
+            this.TbName.Name = "TbName";
+            this.TbName.Size = new System.Drawing.Size(201, 27);
+            this.TbName.TabIndex = 17;
             // 
             // label3
             // 
@@ -114,13 +114,13 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "Nombre";
             // 
-            // TbApellido
+            // TbLastName
             // 
-            this.TbApellido.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbApellido.Location = new System.Drawing.Point(309, 281);
-            this.TbApellido.Name = "TbApellido";
-            this.TbApellido.Size = new System.Drawing.Size(201, 27);
-            this.TbApellido.TabIndex = 19;
+            this.TbLastName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbLastName.Location = new System.Drawing.Point(309, 281);
+            this.TbLastName.Name = "TbLastName";
+            this.TbLastName.Size = new System.Drawing.Size(201, 27);
+            this.TbLastName.TabIndex = 19;
             // 
             // label4
             // 
@@ -187,46 +187,49 @@
             this.label7.Text = "*Para editar, coloque el CIF, luego da al botón ver datos, los cambia y da al bot" +
     "ón actualizar.";
             // 
-            // button4
+            // BtmDelete
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Image = global::UamAcces.Properties.Resources.borrar_usuario;
-            this.button4.Location = new System.Drawing.Point(583, 373);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 73);
-            this.button4.TabIndex = 31;
-            this.button4.UseVisualStyleBackColor = false;
+            this.BtmDelete.BackColor = System.Drawing.Color.Transparent;
+            this.BtmDelete.Image = global::UamAcces.Properties.Resources.borrar_usuario;
+            this.BtmDelete.Location = new System.Drawing.Point(583, 373);
+            this.BtmDelete.Name = "BtmDelete";
+            this.BtmDelete.Size = new System.Drawing.Size(94, 73);
+            this.BtmDelete.TabIndex = 31;
+            this.BtmDelete.UseVisualStyleBackColor = false;
+            this.BtmDelete.Click += new System.EventHandler(this.BtmDelete_Click);
             // 
-            // button3
+            // BtmUpdate
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Image = global::UamAcces.Properties.Resources.perfil_del_usuario;
-            this.button3.Location = new System.Drawing.Point(583, 297);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 70);
-            this.button3.TabIndex = 30;
-            this.button3.UseVisualStyleBackColor = false;
+            this.BtmUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.BtmUpdate.Image = global::UamAcces.Properties.Resources.perfil_del_usuario;
+            this.BtmUpdate.Location = new System.Drawing.Point(583, 297);
+            this.BtmUpdate.Name = "BtmUpdate";
+            this.BtmUpdate.Size = new System.Drawing.Size(94, 70);
+            this.BtmUpdate.TabIndex = 30;
+            this.BtmUpdate.UseVisualStyleBackColor = false;
+            this.BtmUpdate.Click += new System.EventHandler(this.BtmUpdate_Click);
             // 
-            // button2
+            // BtmLook
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Image = global::UamAcces.Properties.Resources.datos;
-            this.button2.Location = new System.Drawing.Point(583, 206);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 83);
-            this.button2.TabIndex = 29;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtmLook.BackColor = System.Drawing.Color.Transparent;
+            this.BtmLook.Image = global::UamAcces.Properties.Resources.datos;
+            this.BtmLook.Location = new System.Drawing.Point(583, 206);
+            this.BtmLook.Name = "BtmLook";
+            this.BtmLook.Size = new System.Drawing.Size(94, 83);
+            this.BtmLook.TabIndex = 29;
+            this.BtmLook.UseVisualStyleBackColor = false;
+            this.BtmLook.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // BtmAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Image = global::UamAcces.Properties.Resources.agregar_usuario__1_;
-            this.button1.Location = new System.Drawing.Point(583, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 73);
-            this.button1.TabIndex = 26;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtmAdd.BackColor = System.Drawing.Color.Transparent;
+            this.BtmAdd.Image = global::UamAcces.Properties.Resources.agregar_usuario__1_;
+            this.BtmAdd.Location = new System.Drawing.Point(583, 127);
+            this.BtmAdd.Name = "BtmAdd";
+            this.BtmAdd.Size = new System.Drawing.Size(94, 73);
+            this.BtmAdd.TabIndex = 26;
+            this.BtmAdd.UseVisualStyleBackColor = false;
+            this.BtmAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -266,12 +269,12 @@
             this.label8.TabIndex = 34;
             this.label8.Text = "Motivo (Externo)";
             // 
-            // TbMotivo
+            // TbReason
             // 
-            this.TbMotivo.Location = new System.Drawing.Point(352, 393);
-            this.TbMotivo.Name = "TbMotivo";
-            this.TbMotivo.Size = new System.Drawing.Size(158, 22);
-            this.TbMotivo.TabIndex = 35;
+            this.TbReason.Location = new System.Drawing.Point(352, 393);
+            this.TbReason.Name = "TbReason";
+            this.TbReason.Size = new System.Drawing.Size(158, 22);
+            this.TbReason.TabIndex = 35;
             // 
             // TbPassword
             // 
@@ -299,22 +302,22 @@
             this.ClientSize = new System.Drawing.Size(871, 597);
             this.Controls.Add(this.TbPassword);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.TbMotivo);
+            this.Controls.Add(this.TbReason);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.CbRole);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtmDelete);
+            this.Controls.Add(this.BtmUpdate);
+            this.Controls.Add(this.BtmLook);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtmAdd);
             this.Controls.Add(this.CbFaculty);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Rol);
-            this.Controls.Add(this.TbApellido);
+            this.Controls.Add(this.TbLastName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TbNombre);
+            this.Controls.Add(this.TbName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.TbCif);
@@ -334,24 +337,24 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TbCif;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.TextBox TbNombre;
+        private System.Windows.Forms.TextBox TbName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TbApellido;
+        private System.Windows.Forms.TextBox TbLastName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label Rol;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox CbFaculty;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtmAdd;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button BtmLook;
+        private System.Windows.Forms.Button BtmUpdate;
+        private System.Windows.Forms.Button BtmDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox CbRole;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TbMotivo;
+        private System.Windows.Forms.TextBox TbReason;
         private System.Windows.Forms.TextBox TbPassword;
         private System.Windows.Forms.Label label9;
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UamAcces.models
 {
-    internal class Administrator : User
+    internal class Administrator : Entrant
     {
         public Administrator()
         {

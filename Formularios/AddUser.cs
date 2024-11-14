@@ -15,10 +15,11 @@ namespace UamAcces.Formularios
 {
     public partial class AddUser : MaterialForm
     {
-        Administration administration = new Administration(); 
+        AdministrationUser administration = new AdministrationUser(); 
         public AddUser()
         {
             InitializeComponent();
+            administration.ReadFile();
             Option();
         }
         protected override void OnPaint(PaintEventArgs e)
@@ -51,10 +52,104 @@ namespace UamAcces.Formularios
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+                User user = new User();
+                user= UserData();
+                DialogResult aswer= MessageBox.Show("¿Seguro desea agregar a este usuario?", "Agregar",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (aswer == DialogResult.Yes)
+                {
+                    administration.AddUser(user, user.CIF, user.Password);
+                Clean();
+                }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                User user = new User();
+                user=administration.Data(int.Parse(TbCif.Text));
+                if (user != null)
+                {
+                    ShowData(user);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de entrada de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtmDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogResult answer = MessageBox.Show("¿Seguro desea eliminar a este usuario?", "Eliminar",
+                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (answer == DialogResult.Yes)
+                { administration.DeleteUser(int.Parse(TbCif.Text)); Clean(); }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de entrada de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtmUpdate_Click(object sender, EventArgs e)
+        {
             User user = new User();
-            user.CIF = int.Parse(TbCif.Text);
-            user.Password = int.Parse(TbPassword.Text);
-            user.
+            user = UserData();
+            DialogResult answer = MessageBox.Show("¿Seguro desea actualizar a este usuario?", "Eliminar",
+                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (answer == DialogResult.Yes)
+            { administration.Update(user, user.CIF); Clean(); }
+        }
+
+        private User UserData()
+        {
+            try
+            {
+                User user = new User();
+                user.CIF= int.Parse(TbCif.Text);
+                user.Password= int.Parse(TbPassword.Text);
+                user.Name= TbName.Text;
+                user.LastName= TbLastName.Text;
+                user.Role= CbRole.SelectedItem.ToString();
+                user.Reason= TbReason.Text;
+                user.Faculty= CbFaculty.SelectedItem.ToString();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de entrada de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return null;
+        }
+
+        private void ShowData(User user)
+        {
+            TbCif.Text = user.CIF.ToString();
+            TbPassword.Text = user.Password.ToString();
+            TbName.Text = user.Name;
+            TbLastName.Text = user.LastName;
+            CbRole.SelectedItem = user.Role;
+            TbReason.Text = user.Reason;
+            CbFaculty.SelectedItem = user.Faculty;
+        }
+
+        private void Clean()
+        {
+            TbCif.Text = "";
+            TbPassword.Text = "";
+            TbName.Text = "";
+            TbLastName.Text = "";
+            CbRole.SelectedIndex=-1;
+            TbReason.Text = "";
+            CbFaculty.SelectedIndex=-1;
         }
     }
 }

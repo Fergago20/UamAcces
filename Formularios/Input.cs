@@ -33,7 +33,7 @@ namespace UamAcces.Formularios
         {
             base.OnPaint(e);
 
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 5))
+            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
             {
                 e.Graphics.DrawRectangle(pen, 0, 0,
                     this.Width - 1, this.Height - 1);

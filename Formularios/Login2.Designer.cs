@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login2));
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbCif = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TbPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TbCif = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,45 +58,45 @@
             this.guna2Button1.Text = "Ingresar";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // tbPassword
+            // TbPassword
             // 
-            this.tbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbPassword.DefaultText = "";
-            this.tbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(389, 254);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '•';
-            this.tbPassword.PlaceholderText = "";
-            this.tbPassword.SelectedText = "";
-            this.tbPassword.Size = new System.Drawing.Size(243, 25);
-            this.tbPassword.TabIndex = 14;
+            this.TbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TbPassword.DefaultText = "";
+            this.TbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbPassword.Location = new System.Drawing.Point(389, 254);
+            this.TbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TbPassword.Name = "TbPassword";
+            this.TbPassword.PasswordChar = '•';
+            this.TbPassword.PlaceholderText = "";
+            this.TbPassword.SelectedText = "";
+            this.TbPassword.Size = new System.Drawing.Size(243, 25);
+            this.TbPassword.TabIndex = 14;
             // 
-            // tbCif
+            // TbCif
             // 
-            this.tbCif.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCif.DefaultText = "";
-            this.tbCif.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCif.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCif.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCif.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCif.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCif.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tbCif.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCif.Location = new System.Drawing.Point(389, 167);
-            this.tbCif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbCif.Name = "tbCif";
-            this.tbCif.PasswordChar = '\0';
-            this.tbCif.PlaceholderText = "";
-            this.tbCif.SelectedText = "";
-            this.tbCif.Size = new System.Drawing.Size(243, 25);
-            this.tbCif.TabIndex = 13;
+            this.TbCif.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TbCif.DefaultText = "";
+            this.TbCif.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TbCif.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TbCif.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbCif.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TbCif.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbCif.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TbCif.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TbCif.Location = new System.Drawing.Point(389, 167);
+            this.TbCif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TbCif.Name = "TbCif";
+            this.TbCif.PasswordChar = '\0';
+            this.TbCif.PlaceholderText = "";
+            this.TbCif.SelectedText = "";
+            this.TbCif.Size = new System.Drawing.Size(243, 25);
+            this.TbCif.TabIndex = 13;
             // 
             // label3
             // 
@@ -145,7 +145,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::UamAcces.Properties.Resources.Logo;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 17);
             this.pictureBox1.Name = "pictureBox1";
@@ -160,8 +160,8 @@
             this.ClientSize = new System.Drawing.Size(813, 468);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbCif);
+            this.Controls.Add(this.TbPassword);
+            this.Controls.Add(this.TbCif);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -176,8 +176,8 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox tbPassword;
-        private Guna.UI2.WinForms.Guna2TextBox tbCif;
+        private Guna.UI2.WinForms.Guna2TextBox TbPassword;
+        private Guna.UI2.WinForms.Guna2TextBox TbCif;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

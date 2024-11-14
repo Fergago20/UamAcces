@@ -128,7 +128,8 @@ namespace UamAcces.Properties {
         ///FCJH
         ///FMDC
         ///UAM COLLEGE
-        ///Posgrado.
+        ///Posgrado
+        ///No Ligado.
         /// </summary>
         internal static string Facultades {
             get {
@@ -142,6 +143,16 @@ namespace UamAcces.Properties {
         internal static System.Drawing.Bitmap formulario_de_llenado {
             get {
                 object obj = ResourceManager.GetObject("formulario_de_llenado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo {
+            get {
+                object obj = ResourceManager.GetObject("Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

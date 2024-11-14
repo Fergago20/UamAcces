@@ -200,6 +200,7 @@
     <None Include="Resources\formulario-de-llenado.png" />
     <None Include="Resources\Facultades.txt" />
     <None Include="Resources\Roles.txt" />
+    <None Include="Resources\Captura_de_pantalla_2024-11-13_2.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

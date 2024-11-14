@@ -46,7 +46,7 @@ namespace UamAcces.models
             SaveUsers();
         }
 
-        private bool Verification(int cif, int password)
+        public bool Verification(int cif, int password)
         {
             foreach (var user in users)
             {

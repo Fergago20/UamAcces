@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UamAcces.models
 {
-    internal class User
+    public class User
     {
         public int CIF { get; set; }
         public int Password {  get; set; }

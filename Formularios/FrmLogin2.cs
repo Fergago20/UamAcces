@@ -12,13 +12,15 @@ using UamAcces.models;
 
 namespace UamAcces.Formularios
 {
-    public partial class Login2 : MaterialForm
+    public partial class FrmLogin2 : MaterialForm
     {
         AdministrationUser administration = new AdministrationUser();
-        public Login2()
+        Administration admincurrent = new Administration();
+        public FrmLogin2()
         {
             InitializeComponent();
             administration.ReadFile();
+            admincurrent.ReadFile();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -27,14 +29,27 @@ namespace UamAcces.Formularios
             {
                 int cif = int.Parse(TbCif.Text);
                 int password = int.Parse(TbPassword.Text);
-                if (!administration.Verification(cif, password))
+                if (administration.Verification(cif, password))
                 {
-                    Entry entry = new Entry();
-                    entry.ShowDialog();
+                    if (admincurrent.DataVerification(cif))
+                    {
+                        Exit exit = new Exit(admincurrent.GetUser(cif));
+                        exit.ShowDialog();
+                    }
+                    else
+                    {
+                        Entry entry = new Entry(administration.Find(cif, password));
+                        entry.ShowDialog();
+                    }
                 }
-                else { MessageBox.Show("CIF o Contraseña incorrecta", "Datos erróneos",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);}
-            }catch (Exception ex)
+                else
+                {
+                    MessageBox.Show("CIF o Contraseña incorrecta", "Datos erróneos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(),"Error de Datos", MessageBoxButtons.OK
                     , MessageBoxIcon.Error);

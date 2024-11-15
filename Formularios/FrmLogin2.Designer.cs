@@ -1,6 +1,6 @@
 ﻿namespace UamAcces.Formularios
 {
-    partial class Login2
+    partial class FrmLogin2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin2));
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.TbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.TbCif = new Guna.UI2.WinForms.Guna2TextBox();

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,7 +13,7 @@ namespace UamAcces.models
 {
     internal class AdministrationUser
     {
-        private const string Registro = "Ingresados.dat";
+        private const string Registro = "Registro.dat";
         List<User> users = new List<User>();
 
         private void SaveUsers()
@@ -48,14 +49,19 @@ namespace UamAcces.models
 
         public bool Verification(int cif, int password)
         {
-            foreach (var user in users)
+            if (File.Exists(Registro))
             {
-                if (user.CIF == cif || user.Password == password)
+                foreach (var user in users)
                 {
-                    return false;
+                    
+                    if (user.CIF == cif && user.Password == password)
+                    {
+                        return true; 
+                    }
                 }
+                return false; 
             }
-            return true;
+            return false;
         }
         public void AddUser(User user, int cif, int password)
         {
@@ -114,6 +120,17 @@ namespace UamAcces.models
                 users.Clear();
                 users = users2;
             }
+        }
+        public User Find(int cif, int password)
+        {
+            foreach (User user in users)
+            {
+                if (user.Password == password && user.CIF == cif)
+                {
+                    return user;
+                }
+            }
+            return null;
         }
     }
 }

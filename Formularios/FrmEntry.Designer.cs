@@ -30,38 +30,42 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entry));
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.LblWelcome = new MaterialSkin.Controls.MaterialLabel();
             this.lblHora = new MaterialSkin.Controls.MaterialLabel();
             this.lblDia = new MaterialSkin.Controls.MaterialLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.RbPedestrian = new System.Windows.Forms.RadioButton();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.RbVehicular = new System.Windows.Forms.RadioButton();
+            this.TbPlate = new System.Windows.Forms.TextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.RbResidential = new System.Windows.Forms.RadioButton();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.RbPrincipal = new System.Windows.Forms.RadioButton();
+            this.GbAcces = new System.Windows.Forms.GroupBox();
+            this.GbEntry = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GbAcces.SuspendLayout();
+            this.GbEntry.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // LblWelcome
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.BackColor = System.Drawing.Color.White;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(223, 81);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(256, 24);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "¡Bienvenido Usuario_Apelido!";
+            this.LblWelcome.AutoSize = true;
+            this.LblWelcome.BackColor = System.Drawing.Color.White;
+            this.LblWelcome.Depth = 0;
+            this.LblWelcome.Font = new System.Drawing.Font("Roboto", 11F);
+            this.LblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.LblWelcome.Location = new System.Drawing.Point(223, 81);
+            this.LblWelcome.MouseState = MaterialSkin.MouseState.HOVER;
+            this.LblWelcome.Name = "LblWelcome";
+            this.LblWelcome.Size = new System.Drawing.Size(256, 24);
+            this.LblWelcome.TabIndex = 0;
+            this.LblWelcome.Text = "¡Bienvenido Usuario_Apelido!";
             // 
             // lblHora
             // 
@@ -124,18 +128,19 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // radioButton1
+            // RbPedestrian
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(227, 230);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(86, 21);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Peatonal";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.RbPedestrian.AutoSize = true;
+            this.RbPedestrian.BackColor = System.Drawing.Color.Transparent;
+            this.RbPedestrian.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbPedestrian.Location = new System.Drawing.Point(6, 11);
+            this.RbPedestrian.Name = "RbPedestrian";
+            this.RbPedestrian.Size = new System.Drawing.Size(86, 21);
+            this.RbPedestrian.TabIndex = 13;
+            this.RbPedestrian.TabStop = true;
+            this.RbPedestrian.Text = "Peatonal";
+            this.RbPedestrian.UseVisualStyleBackColor = false;
+            this.RbPedestrian.CheckedChanged += new System.EventHandler(this.RbPedestrian_CheckedChanged);
             // 
             // materialLabel2
             // 
@@ -151,25 +156,27 @@
             this.materialLabel2.TabIndex = 14;
             this.materialLabel2.Text = "Tipo de Acceso";
             // 
-            // radioButton2
+            // RbVehicular
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(227, 266);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(88, 21);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Vehicular";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.RbVehicular.AutoSize = true;
+            this.RbVehicular.BackColor = System.Drawing.Color.Transparent;
+            this.RbVehicular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbVehicular.Location = new System.Drawing.Point(6, 47);
+            this.RbVehicular.Name = "RbVehicular";
+            this.RbVehicular.Size = new System.Drawing.Size(88, 21);
+            this.RbVehicular.TabIndex = 15;
+            this.RbVehicular.TabStop = true;
+            this.RbVehicular.Text = "Vehicular";
+            this.RbVehicular.UseVisualStyleBackColor = false;
+            this.RbVehicular.CheckedChanged += new System.EventHandler(this.RbVehicular_CheckedChanged);
             // 
-            // textBox1
+            // TbPlate
             // 
-            this.textBox1.Location = new System.Drawing.Point(282, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 22);
-            this.textBox1.TabIndex = 16;
+            this.TbPlate.Enabled = false;
+            this.TbPlate.Location = new System.Drawing.Point(282, 306);
+            this.TbPlate.Name = "TbPlate";
+            this.TbPlate.Size = new System.Drawing.Size(149, 22);
+            this.TbPlate.TabIndex = 16;
             // 
             // materialLabel4
             // 
@@ -185,18 +192,19 @@
             this.materialLabel4.TabIndex = 17;
             this.materialLabel4.Text = "Placa";
             // 
-            // radioButton3
+            // RbResidential
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(409, 349);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(105, 21);
-            this.radioButton3.TabIndex = 20;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Residencial";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.RbResidential.AutoSize = true;
+            this.RbResidential.BackColor = System.Drawing.Color.Transparent;
+            this.RbResidential.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbResidential.Location = new System.Drawing.Point(106, 22);
+            this.RbResidential.Name = "RbResidential";
+            this.RbResidential.Size = new System.Drawing.Size(105, 21);
+            this.RbResidential.TabIndex = 20;
+            this.RbResidential.TabStop = true;
+            this.RbResidential.Text = "Residencial";
+            this.RbResidential.UseVisualStyleBackColor = false;
+            this.RbResidential.CheckedChanged += new System.EventHandler(this.RbResidential_CheckedChanged);
             // 
             // materialLabel5
             // 
@@ -212,41 +220,66 @@
             this.materialLabel5.TabIndex = 19;
             this.materialLabel5.Text = "Entrada";
             // 
-            // radioButton4
+            // RbPrincipal
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(309, 348);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(85, 21);
-            this.radioButton4.TabIndex = 18;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Principal";
-            this.radioButton4.UseVisualStyleBackColor = false;
+            this.RbPrincipal.AutoSize = true;
+            this.RbPrincipal.BackColor = System.Drawing.Color.Transparent;
+            this.RbPrincipal.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RbPrincipal.Location = new System.Drawing.Point(6, 21);
+            this.RbPrincipal.Name = "RbPrincipal";
+            this.RbPrincipal.Size = new System.Drawing.Size(85, 21);
+            this.RbPrincipal.TabIndex = 18;
+            this.RbPrincipal.TabStop = true;
+            this.RbPrincipal.Text = "Principal";
+            this.RbPrincipal.UseVisualStyleBackColor = false;
+            this.RbPrincipal.CheckedChanged += new System.EventHandler(this.RbPrincipal_CheckedChanged);
+            // 
+            // GbAcces
+            // 
+            this.GbAcces.BackColor = System.Drawing.Color.Transparent;
+            this.GbAcces.Controls.Add(this.RbPedestrian);
+            this.GbAcces.Controls.Add(this.RbVehicular);
+            this.GbAcces.Location = new System.Drawing.Point(227, 225);
+            this.GbAcces.Name = "GbAcces";
+            this.GbAcces.Size = new System.Drawing.Size(167, 75);
+            this.GbAcces.TabIndex = 21;
+            this.GbAcces.TabStop = false;
+            // 
+            // GbEntry
+            // 
+            this.GbEntry.BackColor = System.Drawing.Color.Transparent;
+            this.GbEntry.Controls.Add(this.RbPrincipal);
+            this.GbEntry.Controls.Add(this.RbResidential);
+            this.GbEntry.Location = new System.Drawing.Point(309, 334);
+            this.GbEntry.Name = "GbEntry";
+            this.GbEntry.Size = new System.Drawing.Size(220, 54);
+            this.GbEntry.TabIndex = 22;
+            this.GbEntry.TabStop = false;
             // 
             // Entry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 506);
-            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.GbEntry);
+            this.Controls.Add(this.GbAcces);
             this.Controls.Add(this.materialLabel5);
-            this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.materialLabel4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.TbPlate);
             this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblDia);
             this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.materialLabel1);
+            this.Controls.Add(this.LblWelcome);
             this.Name = "Entry";
             this.Text = "Entrada";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GbAcces.ResumeLayout(false);
+            this.GbAcces.PerformLayout();
+            this.GbEntry.ResumeLayout(false);
+            this.GbEntry.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,20 +287,22 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel LblWelcome;
         private MaterialSkin.Controls.MaterialLabel lblHora;
         private MaterialSkin.Controls.MaterialLabel lblDia;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton RbPedestrian;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RadioButton RbVehicular;
+        private System.Windows.Forms.TextBox TbPlate;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton RbResidential;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton RbPrincipal;
+        private System.Windows.Forms.GroupBox GbAcces;
+        private System.Windows.Forms.GroupBox GbEntry;
     }
 }

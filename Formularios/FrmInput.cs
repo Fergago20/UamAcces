@@ -11,13 +11,24 @@ using System.Windows.Forms;
 
 namespace UamAcces.Formularios
 {
-    public partial class Exit : MaterialForm
+    public partial class Input : MaterialForm
     {
-        public Exit()
+        public Input()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 login1 = new Form1();
+            login1.ShowDialog();
+        }
+
+        private void btmIngresar_Click(object sender, EventArgs e)
+        {
+            FrmLogin2 login2 = new FrmLogin2();
+            login2.ShowDialog();
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

@@ -73,59 +73,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\AddUser.cs">
+    <Compile Include="Formularios\FrmAdminUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\AddUser.Designer.cs">
-      <DependentUpon>AddUser.cs</DependentUpon>
+    <Compile Include="Formularios\FrmAdminUser.Designer.cs">
+      <DependentUpon>FrmAdminUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\AdministratorUi.cs">
+    <Compile Include="Formularios\FrmAdministratorUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\AdministratorUi.Designer.cs">
-      <DependentUpon>AdministratorUi.cs</DependentUpon>
+    <Compile Include="Formularios\FrmAdministratorUi.Designer.cs">
+      <DependentUpon>FrmAdministratorUi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Entry.cs">
+    <Compile Include="Formularios\FrmEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Entry.Designer.cs">
-      <DependentUpon>Entry.cs</DependentUpon>
+    <Compile Include="Formularios\FrmEntry.Designer.cs">
+      <DependentUpon>FrmEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Exit.cs">
+    <Compile Include="Formularios\FrmExit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Exit.Designer.cs">
-      <DependentUpon>Exit.cs</DependentUpon>
+    <Compile Include="Formularios\FrmExit.Designer.cs">
+      <DependentUpon>FrmExit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Login1.cs">
+    <Compile Include="Formularios\FrmLogin1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Login1.Designer.cs">
-      <DependentUpon>Login1.cs</DependentUpon>
+    <Compile Include="Formularios\FrmLogin1.Designer.cs">
+      <DependentUpon>FrmLogin1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Input.cs">
+    <Compile Include="Formularios\FrmInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Input.Designer.cs">
-      <DependentUpon>Input.cs</DependentUpon>
+    <Compile Include="Formularios\FrmInput.Designer.cs">
+      <DependentUpon>FrmInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Login2.cs">
+    <Compile Include="Formularios\FrmLogin2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Login2.Designer.cs">
-      <DependentUpon>Login2.cs</DependentUpon>
+    <Compile Include="Formularios\FrmLogin2.Designer.cs">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Report1.cs">
+    <Compile Include="Formularios\FrmReport1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Report1.Designer.cs">
-      <DependentUpon>Report1.cs</DependentUpon>
+    <Compile Include="Formularios\FrmReport1.Designer.cs">
+      <DependentUpon>FrmReport1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FinalReport.cs">
+    <Compile Include="Formularios\FrmFinalReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FinalReport.Designer.cs">
-      <DependentUpon>FinalReport.cs</DependentUpon>
+    <Compile Include="Formularios\FrmFinalReport.Designer.cs">
+      <DependentUpon>FrmFinalReport.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Administration.cs" />
     <Compile Include="models\AdministrationUser.cs" />
@@ -135,32 +135,32 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Formularios\AddUser.resx">
-      <DependentUpon>AddUser.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmAdminUser.resx">
+      <DependentUpon>FrmAdminUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\AdministratorUi.resx">
-      <DependentUpon>AdministratorUi.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmAdministratorUi.resx">
+      <DependentUpon>FrmAdministratorUi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Entry.resx">
-      <DependentUpon>Entry.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmEntry.resx">
+      <DependentUpon>FrmEntry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Exit.resx">
-      <DependentUpon>Exit.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmExit.resx">
+      <DependentUpon>FrmExit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Login1.resx">
-      <DependentUpon>Login1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmLogin1.resx">
+      <DependentUpon>FrmLogin1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Input.resx">
-      <DependentUpon>Input.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmInput.resx">
+      <DependentUpon>FrmInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Login2.resx">
-      <DependentUpon>Login2.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmLogin2.resx">
+      <DependentUpon>FrmLogin2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Report1.resx">
-      <DependentUpon>Report1.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmReport1.resx">
+      <DependentUpon>FrmReport1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FinalReport.resx">
-      <DependentUpon>FinalReport.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmFinalReport.resx">
+      <DependentUpon>FrmFinalReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

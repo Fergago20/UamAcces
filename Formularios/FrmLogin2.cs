@@ -34,12 +34,16 @@ namespace UamAcces.Formularios
                     if (admincurrent.DataVerification(cif))
                     {
                         Exit exit = new Exit(admincurrent.GetUser(cif));
+                        this.Hide();
                         exit.ShowDialog();
+                        
                     }
                     else
                     {
                         Entry entry = new Entry(administration.Find(cif, password));
+                        this.Hide();
                         entry.ShowDialog();
+                        
                     }
                 }
                 else

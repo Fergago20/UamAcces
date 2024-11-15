@@ -21,12 +21,15 @@ namespace UamAcces.Formularios
         private void button1_Click(object sender, EventArgs e)
         {
             Form1 login1 = new Form1();
+            this.Hide();
             login1.ShowDialog();
+            
         }
 
         private void btmIngresar_Click(object sender, EventArgs e)
         {
             FrmLogin2 login2 = new FrmLogin2();
+            this.Hide();
             login2.ShowDialog();
         }
         protected override void OnPaint(PaintEventArgs e)

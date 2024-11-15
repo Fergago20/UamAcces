@@ -54,7 +54,9 @@ namespace UamAcces.Formularios
                 {
                     administration.Add(entrant);
                     Input input = new Input();
+                    this.Hide();
                     input.ShowDialog();
+                    
                 }
                 
 

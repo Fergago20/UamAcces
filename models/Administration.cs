@@ -93,11 +93,9 @@ namespace UamAcces.models
 
         public void Update(int cif,DateTime exit, TimeSpan time)
         {
-            int index = users.FindIndex(user => user.CIF == cif);
-            Entrant user1=users[index];
-            user1.Exit= exit;
-            user1.Time = time;
-            users[index]= user1;
+            int index = users.FindIndex(user => user.CIF == cif&& user.Exit==DateTime.MinValue);
+            users[index].Exit = exit;
+            users[index].Time = time;
             SaveFile();
         }
 
@@ -121,12 +119,12 @@ namespace UamAcces.models
         {
             foreach(Entrant user in users)
             {
-                if(user.CIF == cif)
+                if(user.CIF == cif && user.Exit==DateTime.MinValue)
                 {
                     return user;
                 } 
             }
-            MessageBox.Show("Esto esta malo", "malo");
+           
             return null;
         }
     }

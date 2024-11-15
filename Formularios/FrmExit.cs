@@ -67,6 +67,10 @@ namespace UamAcces.Formularios
             {
                 administration.Update(entrant.CIF, DateTime.Now, timeElapsed);
                 MessageBox.Show("Salida registrada con éxito.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Input input = new Input();
+                this.Hide();
+                input.ShowDialog();
+               
             }
         }
     }

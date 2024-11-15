@@ -30,7 +30,9 @@ namespace UamAcces
                 if (administrator.Validar(cif, password)) 
                 { 
                     AdministratorUi administratorui = new AdministratorUi();
+                    this.Hide();
                     administratorui.ShowDialog();
+                    
                 }else
                 {
                     MessageBox.Show("Contraseña o CIF incorrecto", "Error de datos", 

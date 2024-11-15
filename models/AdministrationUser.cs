@@ -65,7 +65,7 @@ namespace UamAcces.models
         }
         public void AddUser(User user, int cif, int password)
         {
-            if (Verification(cif, password))
+            if (!Verification(cif, password))
             {
                 users.Add(user);
                 SaveUsers();
@@ -126,6 +126,18 @@ namespace UamAcces.models
             foreach (User user in users)
             {
                 if (user.Password == password && user.CIF == cif)
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
+
+        public User FindUser(int cif)
+        {
+            foreach (User user in users)
+            {
+                if ( user.CIF == cif)
                 {
                     return user;
                 }

@@ -21,9 +21,10 @@ namespace UamAcces.Formularios
             InitializeComponent();
             administration.ReadFile();
             admincurrent.ReadFile();
+            TextBoxTab(this);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void BtmIngresar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -36,14 +37,14 @@ namespace UamAcces.Formularios
                         Exit exit = new Exit(admincurrent.GetUser(cif));
                         this.Hide();
                         exit.ShowDialog();
-                        
+                        this.Close();
                     }
                     else
                     {
                         Entry entry = new Entry(administration.Find(cif, password));
                         this.Hide();
                         entry.ShowDialog();
-                        
+                        this.Close();
                     }
                 }
                 else
@@ -55,19 +56,52 @@ namespace UamAcces.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(),"Error de Datos", MessageBoxButtons.OK
+                MessageBox.Show(ex.ToString(), "Error de Datos", MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
             }
-            
         }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
 
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
+        private void TbCif_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Graphics.DrawRectangle(pen, 0, 0,
-                    this.Width - 1, this.Height - 1);
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void TbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void TextBoxTab(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+                }
+
+                if (control.HasChildren)
+                {
+                    TextBoxTab(control);
+                }
+            }
+        }
+
+        private void TextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.IsInputKey = true;
             }
         }
     }

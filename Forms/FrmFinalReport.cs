@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace UamAcces.Formularios
 {
-    public partial class FinalReport : MaterialForm
+    public partial class FrmFinalReport : MaterialForm
     {
-        public FinalReport()
+        public FrmFinalReport()
         {
             InitializeComponent();
         }
+
 
         private void ReporteFinal_Load(object sender, EventArgs e)
         {

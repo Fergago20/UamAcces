@@ -7,12 +7,14 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UamAcces.Archivos;
 
 namespace UamAcces.models
 {
     internal class Administration
     {
         public const string Registro = "Ingresados.dat";
+        AllFile files = new AllFile();
         
         List<Entrant> users=new List<Entrant>();
 
@@ -37,58 +39,13 @@ namespace UamAcces.models
 
         public void SaveFile()
         {
-            File.Delete(Registro);
-            FileStream WriterFile = new FileStream(Registro, FileMode.Create, FileAccess.Write);
-            BinaryWriter Writer = new BinaryWriter(WriterFile);
-
-            foreach (var user in users)
-            {
-                Writer.Write(user.CIF);
-                Writer.Write(user.Name);
-                Writer.Write(user.LastName);
-                Writer.Write(user.Entry.Ticks);
-                Writer.Write(user.Exit.Ticks);
-                Writer.Write(user.EntryType);
-                Writer.Write(user.Plate);
-                Writer.Write(user.EntryPath);
-                Writer.Write(user.Time.Ticks);
-
-            }
-            Writer.Close();
+            files.SaveFile(users);
         
         }
 
         public void ReadFile()
         {
-            if (File.Exists(Registro))
-            {
-                List<Entrant> users1 = new List<Entrant>();
-                FileStream ReadFile = new FileStream(Registro, FileMode.Open, FileAccess.Read);
-                BinaryReader Reader = new BinaryReader(ReadFile);
-
-            
-                
-                while (ReadFile.Position != ReadFile.Length)
-                {
-                    Entrant user = new Entrant();
-                    user.CIF = Reader.ReadInt32();
-                    user.Name = Reader.ReadString();
-                    user.LastName = Reader.ReadString();
-                    long ticks = Reader.ReadInt64();
-                    user.Entry = new DateTime(ticks);
-                    ticks = Reader.ReadInt64();
-                    user.Exit = new DateTime(ticks);
-                    user.EntryType = Reader.ReadString();
-                    user.Plate = Reader.ReadString();
-                    user.EntryPath = Reader.ReadString();
-                    ticks = Reader.ReadInt64();
-                    user.Time = new TimeSpan(ticks);
-                    users1.Add(user);
-                }
-                Reader.Close();
-                users.Clear();
-                users = users1;
-            }
+           files.ReadFile(users);
         }
 
         public void Update(int cif,DateTime exit, TimeSpan time)

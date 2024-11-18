@@ -34,7 +34,7 @@
             this.LblRestHour = new System.Windows.Forms.Label();
             this.LblHour = new System.Windows.Forms.Label();
             this.LblEntry = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtmClose = new System.Windows.Forms.Button();
             this.BtmExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -87,14 +87,15 @@
             this.LblEntry.TabIndex = 16;
             this.LblEntry.Text = "Hora de Entrada:";
             // 
-            // button2
+            // BtmClose
             // 
-            this.button2.Image = global::UamAcces.Properties.Resources.error;
-            this.button2.Location = new System.Drawing.Point(431, 271);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 94);
-            this.button2.TabIndex = 18;
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtmClose.Image = global::UamAcces.Properties.Resources.error;
+            this.BtmClose.Location = new System.Drawing.Point(431, 271);
+            this.BtmClose.Name = "BtmClose";
+            this.BtmClose.Size = new System.Drawing.Size(110, 94);
+            this.BtmClose.TabIndex = 18;
+            this.BtmClose.UseVisualStyleBackColor = true;
+            this.BtmClose.Click += new System.EventHandler(this.BtmClose_Click);
             // 
             // BtmExit
             // 
@@ -110,7 +111,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 64);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 19;
@@ -135,13 +136,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 440);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtmClose);
             this.Controls.Add(this.BtmExit);
             this.Controls.Add(this.LblEntry);
             this.Controls.Add(this.LblHour);
             this.Controls.Add(this.LblRestHour);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "Exit";
+            this.Sizable = false;
             this.Text = "Salida";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -156,7 +159,7 @@
         private System.Windows.Forms.Label LblHour;
         private System.Windows.Forms.Label LblEntry;
         private System.Windows.Forms.Button BtmExit;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtmClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;

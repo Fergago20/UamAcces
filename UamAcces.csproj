@@ -73,94 +73,113 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\FrmAdminUser.cs">
+    <Compile Include="Archivos\AllFile.cs" />
+    <Compile Include="Dao\ReportAdmin.cs" />
+    <Compile Include="DataSet\DsEntrant.cs">
+      <DependentUpon>DsEntrant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DsEntrant.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEntrant.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAdminUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmAdminUser.Designer.cs">
+    <Compile Include="Forms\FrmAdminUser.Designer.cs">
       <DependentUpon>FrmAdminUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmAdministratorUi.cs">
+    <Compile Include="Forms\FrmAdministratorUi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmAdministratorUi.Designer.cs">
+    <Compile Include="Forms\FrmAdministratorUi.Designer.cs">
       <DependentUpon>FrmAdministratorUi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmEntry.cs">
+    <Compile Include="Forms\FrmEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmEntry.Designer.cs">
+    <Compile Include="Forms\FrmEntry.Designer.cs">
       <DependentUpon>FrmEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmExit.cs">
+    <Compile Include="Forms\FrmExit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmExit.Designer.cs">
+    <Compile Include="Forms\FrmExit.Designer.cs">
       <DependentUpon>FrmExit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmLogin1.cs">
+    <Compile Include="Forms\FrmLogin1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmLogin1.Designer.cs">
+    <Compile Include="Forms\FrmLogin1.Designer.cs">
       <DependentUpon>FrmLogin1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmInput.cs">
+    <Compile Include="Forms\FrmInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmInput.Designer.cs">
+    <Compile Include="Forms\FrmInput.Designer.cs">
       <DependentUpon>FrmInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmLogin2.cs">
+    <Compile Include="Forms\FrmLogin2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmLogin2.Designer.cs">
+    <Compile Include="Forms\FrmLogin2.Designer.cs">
       <DependentUpon>FrmLogin2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmReport1.cs">
+    <Compile Include="Forms\FrmReport1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmReport1.Designer.cs">
+    <Compile Include="Forms\FrmReport1.Designer.cs">
       <DependentUpon>FrmReport1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmFinalReport.cs">
+    <Compile Include="Forms\FrmFinalReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmFinalReport.Designer.cs">
+    <Compile Include="Forms\FrmFinalReport.Designer.cs">
       <DependentUpon>FrmFinalReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="models\Administration.cs" />
-    <Compile Include="models\AdministrationUser.cs" />
+    <Compile Include="Forms\FrmReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReport2.Designer.cs">
+      <DependentUpon>FrmReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\Administration.cs" />
+    <Compile Include="Dao\AdministrationUser.cs" />
     <Compile Include="models\Administrator.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="models\Entrant.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Formularios\FrmAdminUser.resx">
+    <EmbeddedResource Include="Forms\FrmAdminUser.resx">
       <DependentUpon>FrmAdminUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmAdministratorUi.resx">
+    <EmbeddedResource Include="Forms\FrmAdministratorUi.resx">
       <DependentUpon>FrmAdministratorUi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmEntry.resx">
+    <EmbeddedResource Include="Forms\FrmEntry.resx">
       <DependentUpon>FrmEntry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmExit.resx">
+    <EmbeddedResource Include="Forms\FrmExit.resx">
       <DependentUpon>FrmExit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmLogin1.resx">
+    <EmbeddedResource Include="Forms\FrmLogin1.resx">
       <DependentUpon>FrmLogin1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmInput.resx">
+    <EmbeddedResource Include="Forms\FrmInput.resx">
       <DependentUpon>FrmInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmLogin2.resx">
+    <EmbeddedResource Include="Forms\FrmLogin2.resx">
       <DependentUpon>FrmLogin2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmReport1.resx">
+    <EmbeddedResource Include="Forms\FrmReport1.resx">
       <DependentUpon>FrmReport1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmFinalReport.resx">
+    <EmbeddedResource Include="Forms\FrmFinalReport.resx">
       <DependentUpon>FrmFinalReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReport2.resx">
+      <DependentUpon>FrmReport2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +191,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\RptEntrant.rdlc" />
+    <EmbeddedResource Include="Reports\RptUsers.rdlc" />
+    <None Include="DataSet\DsEntrant.xsc">
+      <DependentUpon>DsEntrant.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsEntrant.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEntrant.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsEntrant.xss">
+      <DependentUpon>DsEntrant.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -221,5 +253,6 @@
     <None Include="Resources\calendario.gif" />
     <None Include="Resources\usuario.gif" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

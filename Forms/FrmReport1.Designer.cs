@@ -34,11 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Desde = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtpDesde = new System.Windows.Forms.DateTimePicker();
-            this.dtpHasta = new System.Windows.Forms.DateTimePicker();
+            this.DtpDate1 = new System.Windows.Forms.DateTimePicker();
+            this.DtpDate2 = new System.Windows.Forms.DateTimePicker();
             this.Rol = new System.Windows.Forms.Label();
             this.btmInforme = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CbRole = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +47,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 64);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 1;
@@ -96,21 +96,22 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Hasta";
             // 
-            // dtpDesde
+            // DtpDate1
             // 
-            this.dtpDesde.CalendarFont = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Location = new System.Drawing.Point(338, 168);
-            this.dtpDesde.Name = "dtpDesde";
-            this.dtpDesde.Size = new System.Drawing.Size(264, 22);
-            this.dtpDesde.TabIndex = 5;
+            this.DtpDate1.CalendarFont = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate1.Location = new System.Drawing.Point(338, 168);
+            this.DtpDate1.Name = "DtpDate1";
+            this.DtpDate1.Size = new System.Drawing.Size(264, 25);
+            this.DtpDate1.TabIndex = 5;
             // 
-            // dtpHasta
+            // DtpDate2
             // 
-            this.dtpHasta.CalendarFont = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Location = new System.Drawing.Point(338, 223);
-            this.dtpHasta.Name = "dtpHasta";
-            this.dtpHasta.Size = new System.Drawing.Size(264, 22);
-            this.dtpHasta.TabIndex = 6;
+            this.DtpDate2.CalendarFont = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate2.Location = new System.Drawing.Point(338, 223);
+            this.DtpDate2.Name = "DtpDate2";
+            this.DtpDate2.Size = new System.Drawing.Size(264, 22);
+            this.DtpDate2.TabIndex = 6;
             // 
             // Rol
             // 
@@ -126,36 +127,39 @@
             // btmInforme
             // 
             this.btmInforme.Image = global::UamAcces.Properties.Resources.formulario_de_llenado;
-            this.btmInforme.Location = new System.Drawing.Point(413, 327);
+            this.btmInforme.Location = new System.Drawing.Point(412, 329);
             this.btmInforme.Name = "btmInforme";
-            this.btmInforme.Size = new System.Drawing.Size(75, 79);
+            this.btmInforme.Size = new System.Drawing.Size(104, 111);
             this.btmInforme.TabIndex = 13;
             this.btmInforme.UseVisualStyleBackColor = true;
             this.btmInforme.Click += new System.EventHandler(this.btmInforme_Click);
             // 
-            // comboBox1
+            // CbRole
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(338, 276);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(264, 24);
-            this.comboBox1.TabIndex = 14;
+            this.CbRole.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbRole.FormattingEnabled = true;
+            this.CbRole.Location = new System.Drawing.Point(338, 276);
+            this.CbRole.Name = "CbRole";
+            this.CbRole.Size = new System.Drawing.Size(264, 27);
+            this.CbRole.TabIndex = 14;
             // 
             // Report1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 432);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(731, 461);
+            this.Controls.Add(this.CbRole);
             this.Controls.Add(this.btmInforme);
             this.Controls.Add(this.Rol);
-            this.Controls.Add(this.dtpHasta);
-            this.Controls.Add(this.dtpDesde);
+            this.Controls.Add(this.DtpDate2);
+            this.Controls.Add(this.DtpDate1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Desde);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "Report1";
+            this.Sizable = false;
             this.Text = "Reporte Historial";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -171,10 +175,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Desde;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpDesde;
-        private System.Windows.Forms.DateTimePicker dtpHasta;
+        private System.Windows.Forms.DateTimePicker DtpDate1;
+        private System.Windows.Forms.DateTimePicker DtpDate2;
         private System.Windows.Forms.Label Rol;
         private System.Windows.Forms.Button btmInforme;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CbRole;
     }
 }

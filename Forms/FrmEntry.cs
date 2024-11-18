@@ -26,6 +26,7 @@ namespace UamAcces.Formularios
             user = user1;
             LblWelcome.Text = $"¡Bienvenido {user.Name} {user.LastName}!";
             timer1.Enabled = true;
+            TextBoxTab(this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace UamAcces.Formularios
             lblDia.Text = $"Día: {DateTime.Today.ToString("dd/MM/yyyy")}";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtmEntry_Click(object sender, EventArgs e)
         {
             try
             {
@@ -43,6 +44,8 @@ namespace UamAcces.Formularios
                 entrant.CIF = user.CIF;
                 entrant.Name = user.Name;
                 entrant.LastName = user.LastName;
+                entrant.Role = user.Role;
+                entrant.Faculty = user.Faculty;
                 entrant.Entry=DateTime.Now;
                 entrant.EntryPath = wayaccess;
                 entrant.EntryType= typeaccess;
@@ -56,7 +59,7 @@ namespace UamAcces.Formularios
                     Input input = new Input();
                     this.Hide();
                     input.ShowDialog();
-                    
+                    this.Close();
                 }
                 
 
@@ -68,16 +71,6 @@ namespace UamAcces.Formularios
 
         }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
-            {
-                e.Graphics.DrawRectangle(pen, 0, 0, 
-                    this.Width - 1, this.Height - 1);
-            }
-        }
 
         private void RbVehicular_CheckedChanged(object sender, EventArgs e)
         {
@@ -99,6 +92,30 @@ namespace UamAcces.Formularios
         {
             TbPlate.Enabled = false;
             typeaccess = RbPedestrian.Text;
+        }
+
+        private void TextBoxTab(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+                }
+
+                if (control.HasChildren)
+                {
+                    TextBoxTab(control);
+                }
+            }
+        }
+
+        private void TextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.IsInputKey = true;
+            }
         }
     }
 }

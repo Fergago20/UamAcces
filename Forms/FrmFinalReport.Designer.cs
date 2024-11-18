@@ -1,6 +1,6 @@
 ﻿namespace UamAcces.Formularios
 {
-    partial class FinalReport
+    partial class FrmFinalReport
     {
         /// <summary>
         /// Required designer variable.
@@ -55,6 +55,6 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

@@ -8,6 +8,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UamAcces.Archivos;
 
 namespace UamAcces.models
 {
@@ -15,24 +16,11 @@ namespace UamAcces.models
     {
         private const string Registro = "Registro.dat";
         List<User> users = new List<User>();
+        AllFile files = new AllFile();
 
-        private void SaveUsers()
+        public void SaveUsers()
         {
-            File.Delete(Registro);
-            FileStream WriterFile = new FileStream(Registro, FileMode.Create, FileAccess.Write);
-            BinaryWriter Writer = new BinaryWriter(WriterFile);
-
-            foreach (var user in users)
-            {
-                Writer.Write(user.CIF);
-                Writer.Write(user.Password);
-                Writer.Write(user.Name);
-                Writer.Write(user.LastName);
-                Writer.Write(user.Faculty);
-                Writer.Write(user.Role);
-                Writer.Write(user.Reason);
-            }
-            Writer.Close();
+            files.SaveUsers(users);
         }
 
         public void DeleteUser(int cif)
@@ -70,6 +58,11 @@ namespace UamAcces.models
                 users.Add(user);
                 SaveUsers();
             }
+            else
+            {
+                MessageBox.Show("CIF o Contraseñas ya ocupadas", "Error de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public User Data(int cif)
@@ -96,30 +89,7 @@ namespace UamAcces.models
 
         public void ReadFile()
         {
-            if (File.Exists(Registro))
-            {
-
-
-                List<User> users2 = new List<User>();
-                FileStream File = new FileStream(Registro, FileMode.Open, FileAccess.Read); ;
-                BinaryReader Reader = new BinaryReader(File);
-
-                while (File.Position != File.Length)
-                {
-                    User user = new User();
-                    user.CIF = Reader.ReadInt32();
-                    user.Password = Reader.ReadInt32();
-                    user.Name = Reader.ReadString();
-                    user.LastName = Reader.ReadString();
-                    user.Faculty = Reader.ReadString();
-                    user.Role = Reader.ReadString();
-                    user.Reason = Reader.ReadString();
-                    users2.Add(user);
-                }
-                Reader.Close();
-                users.Clear();
-                users = users2;
-            }
+            files.ReadUser(users);
         }
         public User Find(int cif, int password)
         {

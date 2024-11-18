@@ -21,16 +21,7 @@ namespace UamAcces.Formularios
             InitializeComponent();
             administration.ReadFile();
             Option();
-        }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
-            {
-                e.Graphics.DrawRectangle(pen, 0, 0,
-                    this.Width - 1, this.Height - 1);
-            }
+            TextBoxTab(this);
         }
 
         private void Option()
@@ -50,7 +41,7 @@ namespace UamAcces.Formularios
             CbRole.Items.AddRange(roles);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddUser_Click(object sender, EventArgs e)
         {
            
                 User user = new User();
@@ -64,7 +55,7 @@ namespace UamAcces.Formularios
                 }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void LookUser_Click(object sender, EventArgs e)
         {
             try
             {
@@ -150,6 +141,49 @@ namespace UamAcces.Formularios
             CbRole.SelectedIndex=-1;
             TbReason.Text = "";
             CbFaculty.SelectedIndex=-1;
+        }
+        private void TextBoxTab(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+                }
+
+                if (control.HasChildren)
+                {
+                    TextBoxTab(control);
+                }
+            }
+        }
+
+        private void TextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                e.IsInputKey = true;
+            }
+        }
+
+        private void TbCif_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void TbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
         }
     }
 }

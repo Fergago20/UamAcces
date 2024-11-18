@@ -36,9 +36,9 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tbCif = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtmINgresar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             this.tbCif.SelectedText = "";
             this.tbCif.Size = new System.Drawing.Size(243, 25);
             this.tbCif.TabIndex = 6;
+            this.tbCif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Letters);
             // 
             // tbPassword
             // 
@@ -118,29 +119,13 @@
             this.tbPassword.SelectedText = "";
             this.tbPassword.Size = new System.Drawing.Size(243, 25);
             this.tbPassword.TabIndex = 7;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.DarkSlateGray;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(399, 342);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(243, 65);
-            this.guna2Button1.TabIndex = 8;
-            this.guna2Button1.Text = "Ingresar";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Letters2);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 63);
+            this.panel1.Location = new System.Drawing.Point(0, 63);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 9;
@@ -155,21 +140,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // BtmINgresar
+            // 
+            this.BtmINgresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtmINgresar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtmINgresar.ForeColor = System.Drawing.Color.White;
+            this.BtmINgresar.Location = new System.Drawing.Point(429, 334);
+            this.BtmINgresar.Name = "BtmINgresar";
+            this.BtmINgresar.Size = new System.Drawing.Size(161, 56);
+            this.BtmINgresar.TabIndex = 10;
+            this.BtmINgresar.Text = "Ingresar";
+            this.BtmINgresar.UseVisualStyleBackColor = false;
+            this.BtmINgresar.Click += new System.EventHandler(this.BtmIngresar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(793, 484);
+            this.Controls.Add(this.BtmINgresar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbCif);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.Sizable = false;
             this.Text = "UAM ACCESS";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -186,9 +186,9 @@
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2TextBox tbCif;
         private Guna.UI2.WinForms.Guna2TextBox tbPassword;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button BtmINgresar;
     }
 }
 

@@ -107,13 +107,13 @@
             this.button1.Size = new System.Drawing.Size(108, 88);
             this.button1.TabIndex = 11;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.BtmEntry_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(9, 64);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 12;
@@ -272,7 +272,9 @@
             this.Controls.Add(this.lblDia);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.LblWelcome);
+            this.MaximizeBox = false;
             this.Name = "Entry";
+            this.Sizable = false;
             this.Text = "Entrada";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -18,12 +18,12 @@ namespace UamAcces.Formularios
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtmAdmin_Click(object sender, EventArgs e)
         {
             Form1 login1 = new Form1();
             this.Hide();
             login1.ShowDialog();
-            
+            this.Close();
         }
 
         private void btmIngresar_Click(object sender, EventArgs e)
@@ -31,16 +31,7 @@ namespace UamAcces.Formularios
             FrmLogin2 login2 = new FrmLogin2();
             this.Hide();
             login2.ShowDialog();
-        }
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
-            {
-                e.Graphics.DrawRectangle(pen, 0, 0,
-                    this.Width - 1, this.Height - 1);
-            }
+            this.Close();
         }
     }
 }

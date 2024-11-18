@@ -36,16 +36,6 @@ namespace UamAcces.Formularios
             }
         }
 
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            base.OnPaint(e);
-
-            using (Pen pen = new Pen(Color.FromArgb(55, 71, 79), 20))
-            {
-                e.Graphics.DrawRectangle(pen, 0, 0,
-                    this.Width - 1, this.Height - 1);
-            }
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -70,8 +60,13 @@ namespace UamAcces.Formularios
                 Input input = new Input();
                 this.Hide();
                 input.ShowDialog();
-               
+                this.Close();
             }
+        }
+
+        private void BtmClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

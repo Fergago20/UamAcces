@@ -86,6 +86,7 @@
             this.TbCif.Name = "TbCif";
             this.TbCif.Size = new System.Drawing.Size(201, 27);
             this.TbCif.TabIndex = 14;
+            this.TbCif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCif_KeyPress);
             // 
             // splitter1
             // 
@@ -191,9 +192,9 @@
             // 
             this.BtmDelete.BackColor = System.Drawing.Color.Transparent;
             this.BtmDelete.Image = global::UamAcces.Properties.Resources.borrar_usuario;
-            this.BtmDelete.Location = new System.Drawing.Point(583, 373);
+            this.BtmDelete.Location = new System.Drawing.Point(583, 412);
             this.BtmDelete.Name = "BtmDelete";
-            this.BtmDelete.Size = new System.Drawing.Size(94, 73);
+            this.BtmDelete.Size = new System.Drawing.Size(113, 96);
             this.BtmDelete.TabIndex = 31;
             this.BtmDelete.UseVisualStyleBackColor = false;
             this.BtmDelete.Click += new System.EventHandler(this.BtmDelete_Click);
@@ -202,9 +203,9 @@
             // 
             this.BtmUpdate.BackColor = System.Drawing.Color.Transparent;
             this.BtmUpdate.Image = global::UamAcces.Properties.Resources.perfil_del_usuario;
-            this.BtmUpdate.Location = new System.Drawing.Point(583, 297);
+            this.BtmUpdate.Location = new System.Drawing.Point(583, 311);
             this.BtmUpdate.Name = "BtmUpdate";
-            this.BtmUpdate.Size = new System.Drawing.Size(94, 70);
+            this.BtmUpdate.Size = new System.Drawing.Size(113, 87);
             this.BtmUpdate.TabIndex = 30;
             this.BtmUpdate.UseVisualStyleBackColor = false;
             this.BtmUpdate.Click += new System.EventHandler(this.BtmUpdate_Click);
@@ -213,29 +214,29 @@
             // 
             this.BtmLook.BackColor = System.Drawing.Color.Transparent;
             this.BtmLook.Image = global::UamAcces.Properties.Resources.datos;
-            this.BtmLook.Location = new System.Drawing.Point(583, 206);
+            this.BtmLook.Location = new System.Drawing.Point(583, 209);
             this.BtmLook.Name = "BtmLook";
-            this.BtmLook.Size = new System.Drawing.Size(94, 83);
+            this.BtmLook.Size = new System.Drawing.Size(113, 96);
             this.BtmLook.TabIndex = 29;
             this.BtmLook.UseVisualStyleBackColor = false;
-            this.BtmLook.Click += new System.EventHandler(this.button2_Click);
+            this.BtmLook.Click += new System.EventHandler(this.LookUser_Click);
             // 
             // BtmAdd
             // 
             this.BtmAdd.BackColor = System.Drawing.Color.Transparent;
             this.BtmAdd.Image = global::UamAcces.Properties.Resources.agregar_usuario__1_;
-            this.BtmAdd.Location = new System.Drawing.Point(583, 127);
+            this.BtmAdd.Location = new System.Drawing.Point(583, 107);
             this.BtmAdd.Name = "BtmAdd";
-            this.BtmAdd.Size = new System.Drawing.Size(94, 73);
+            this.BtmAdd.Size = new System.Drawing.Size(113, 93);
             this.BtmAdd.TabIndex = 26;
             this.BtmAdd.UseVisualStyleBackColor = false;
-            this.BtmAdd.Click += new System.EventHandler(this.button1_Click);
+            this.BtmAdd.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 64);
+            this.panel1.Location = new System.Drawing.Point(2, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 32;
@@ -283,6 +284,7 @@
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.Size = new System.Drawing.Size(201, 27);
             this.TbPassword.TabIndex = 37;
+            this.TbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbPassword_KeyPress);
             // 
             // label9
             // 
@@ -323,7 +325,9 @@
             this.Controls.Add(this.TbCif);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "AddUser";
+            this.Sizable = false;
             this.Text = "Administrar Usuarios";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

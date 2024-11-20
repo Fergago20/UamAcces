@@ -44,19 +44,25 @@ namespace UamAcces.Forms
             if (!string.IsNullOrEmpty(role))
             {
                 ReportAdmin reportAdmin = new ReportAdmin();
-                entrants=reportAdmin.Organize2(entrants, role);
+                entrants = reportAdmin.Organize2(entrants, role);
+                reportAdmin.BubbleSort(entrants);
                 Report(entrants);
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un rol", "No hay datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Report(List<Entrant> origin)
         {
-            ReportDataSource dataSource = new ReportDataSource("DsData", origin);
+            ReportDataSource dataSource = new ReportDataSource("DtEntrant", origin);
             FrmFinalReport finalReport = new FrmFinalReport();
             finalReport.reportViewer1.LocalReport.DataSources.Clear();
             finalReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
             finalReport.reportViewer1.LocalReport.ReportEmbeddedResource =
-                "UamAcces.Reports.RptUsers.rdlc";
+                "UamAcces.Reports.RptEntrant.rdlc";
             finalReport.reportViewer1.RefreshReport();
 
             finalReport.ShowDialog();

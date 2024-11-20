@@ -29,8 +29,8 @@ namespace UamAcces
         {
             try
             {
-                int cif = int.Parse(tbCif.Text);
-                int password = int.Parse(tbPassword.Text);
+                int cif = int.Parse(TbCif.Text);
+                int password = int.Parse(TbPassword.Text);
                 if (administrator.Validar(cif, password))
                 {
                     AdministratorUi administratorui = new AdministratorUi();
@@ -51,25 +51,6 @@ namespace UamAcces
             }
         }
 
-        private void Letters(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                MessageBox.Show("No se introducen letras", "Error de datos",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-            }
-        }
-
-        private void Letters2(object sender, KeyPressEventArgs er)
-        {
-            if (!char.IsControl(er.KeyChar) && !char.IsDigit(er.KeyChar))
-            {
-                MessageBox.Show("No se introducen letras", "Error de datos",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-                er.Handled = true;
-            }
-        }
 
         private void TextBoxTab(Control parent)
         {
@@ -92,6 +73,26 @@ namespace UamAcces
             if (e.KeyCode == Keys.Tab)
             {
                 e.IsInputKey = true; 
+            }
+        }
+
+        private void Letter(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void Letter2(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
             }
         }
     }

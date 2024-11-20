@@ -36,5 +36,29 @@ namespace UamAcces.Dao
             }
             return entrants2;
         }
+
+        public void BubbleSort(List<Entrant> entrants)
+        {
+            bool swapped;
+            
+            for (int i = 0; i < entrants.Count - 1; i++)
+            {
+                swapped = false;
+
+                for (int j = 0; j < entrants.Count - i - 1; j++)
+                {
+                    if (entrants[j].Entry > entrants[j + 1].Entry)
+                    {
+                        
+                        var temp = entrants[j];
+                        entrants[j] = entrants[j + 1];
+                        entrants[j + 1] = temp;
+
+                        swapped = true;
+                    }
+                }
+                if (!swapped) break;
+            }
+        }
     }
 }

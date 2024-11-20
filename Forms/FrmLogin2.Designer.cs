@@ -29,59 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin2));
-            this.TbPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TbCif = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtmIngresar = new System.Windows.Forms.Button();
+            this.TbCif = new System.Windows.Forms.TextBox();
+            this.TbPassword = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // TbPassword
-            // 
-            this.TbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TbPassword.DefaultText = "";
-            this.TbPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TbPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TbPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbPassword.Location = new System.Drawing.Point(389, 254);
-            this.TbPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TbPassword.Name = "TbPassword";
-            this.TbPassword.PasswordChar = '•';
-            this.TbPassword.PlaceholderText = "";
-            this.TbPassword.SelectedText = "";
-            this.TbPassword.Size = new System.Drawing.Size(243, 25);
-            this.TbPassword.TabIndex = 14;
-            this.TbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbPassword_KeyPress);
-            // 
-            // TbCif
-            // 
-            this.TbCif.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TbCif.DefaultText = "";
-            this.TbCif.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TbCif.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TbCif.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbCif.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TbCif.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbCif.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TbCif.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TbCif.Location = new System.Drawing.Point(389, 167);
-            this.TbCif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TbCif.Name = "TbCif";
-            this.TbCif.PasswordChar = '\0';
-            this.TbCif.PlaceholderText = "";
-            this.TbCif.SelectedText = "";
-            this.TbCif.Size = new System.Drawing.Size(243, 25);
-            this.TbCif.TabIndex = 13;
-            this.TbCif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbCif_KeyPress);
             // 
             // label3
             // 
@@ -143,7 +101,7 @@
             this.BtmIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.BtmIngresar.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtmIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtmIngresar.Location = new System.Drawing.Point(424, 311);
+            this.BtmIngresar.Location = new System.Drawing.Point(399, 323);
             this.BtmIngresar.Name = "BtmIngresar";
             this.BtmIngresar.Size = new System.Drawing.Size(161, 56);
             this.BtmIngresar.TabIndex = 11;
@@ -151,15 +109,30 @@
             this.BtmIngresar.UseVisualStyleBackColor = false;
             this.BtmIngresar.Click += new System.EventHandler(this.BtmIngresar_Click);
             // 
+            // TbCif
+            // 
+            this.TbCif.Location = new System.Drawing.Point(388, 167);
+            this.TbCif.Name = "TbCif";
+            this.TbCif.Size = new System.Drawing.Size(183, 22);
+            this.TbCif.TabIndex = 17;
+            // 
+            // TbPassword
+            // 
+            this.TbPassword.Location = new System.Drawing.Point(388, 258);
+            this.TbPassword.Name = "TbPassword";
+            this.TbPassword.PasswordChar = '⁕';
+            this.TbPassword.Size = new System.Drawing.Size(183, 22);
+            this.TbPassword.TabIndex = 18;
+            // 
             // FrmLogin2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 468);
-            this.Controls.Add(this.BtmIngresar);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.TbPassword);
             this.Controls.Add(this.TbCif);
+            this.Controls.Add(this.BtmIngresar);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -175,13 +148,13 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox TbPassword;
-        private Guna.UI2.WinForms.Guna2TextBox TbCif;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button BtmIngresar;
+        private System.Windows.Forms.TextBox TbCif;
+        private System.Windows.Forms.TextBox TbPassword;
     }
 }

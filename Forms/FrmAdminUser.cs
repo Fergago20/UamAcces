@@ -31,7 +31,7 @@ namespace UamAcces.Formularios
             string contenido1 = Properties.Resources.Facultades;
             string contenido2= Properties.Resources.Roles;
 
-            // Dividir el contenido en líneas
+            
             string[] faculties = contenido1.Split(new[] 
             { Environment.NewLine }, StringSplitOptions.None);
             CbFaculty.Items.AddRange(faculties);
@@ -41,18 +41,55 @@ namespace UamAcces.Formularios
             CbRole.Items.AddRange(roles);
         }
 
+        private bool VerificationCamp(Control controlFather)
+        {
+            foreach (Control control in controlFather.Controls)
+            {
+                if (control is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    MessageBox.Show($"El campo '{textBox.Name}' está vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (control is ComboBox comboBox && comboBox.SelectedIndex == -1)
+                {
+                    MessageBox.Show($"Debes seleccionar una opción en '{comboBox.Name}'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+
+                if (control is CheckBox checkBox && !checkBox.Checked)
+                {
+                    MessageBox.Show($"El checkbox '{checkBox.Name}' debe estar marcado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                if (control.HasChildren)
+                {
+                    if (!VerificationCamp(control))
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+
         private void AddUser_Click(object sender, EventArgs e)
         {
            
                 User user = new User();
                 user= UserData();
+            if(VerificationCamp(this))
+            { 
                 DialogResult aswer= MessageBox.Show("¿Seguro desea agregar a este usuario?", "Agregar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (aswer == DialogResult.Yes)
                 {
                     administration.AddUser(user, user.CIF, user.Password);
-                Clean();
-                }
+                    Clean();
+                }  
+            }
+            Clean();
         }
 
         private void LookUser_Click(object sender, EventArgs e)

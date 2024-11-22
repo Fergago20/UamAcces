@@ -9,3 +9,4 @@
 <a href="https://www.flaticon.es/iconos-gratis/reloj-de-salida" title="reloj de salida iconos">Reloj de salida iconos creados por Freepik - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/sal" title="sal iconos">Sal iconos creados por Smashicons - Flaticon</a>
 <a href="https://www.flaticon.es/iconos-gratis/error" title="error iconos">Error iconos creados por Freepik - Flaticon</a>
+<a href="https://www.flaticon.es/iconos-gratis/salir" title="salir iconos">Salir iconos creados por Freepik - Flaticon</a>

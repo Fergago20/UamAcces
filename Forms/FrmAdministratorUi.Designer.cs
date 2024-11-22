@@ -41,6 +41,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.BtmReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -171,11 +172,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.AdminUser_Click);
             // 
+            // BtmReturn
+            // 
+            this.BtmReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtmReturn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtmReturn.ForeColor = System.Drawing.Color.White;
+            this.BtmReturn.Location = new System.Drawing.Point(11, 461);
+            this.BtmReturn.Name = "BtmReturn";
+            this.BtmReturn.Size = new System.Drawing.Size(130, 41);
+            this.BtmReturn.TabIndex = 22;
+            this.BtmReturn.Text = "Regresar";
+            this.BtmReturn.UseVisualStyleBackColor = false;
+            this.BtmReturn.Click += new System.EventHandler(this.BtmReturn_Click);
+            // 
             // AdministratorUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1091, 526);
+            this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -212,5 +227,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtmReturn;
     }
 }

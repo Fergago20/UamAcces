@@ -34,6 +34,7 @@
             this.CbRole = new System.Windows.Forms.ComboBox();
             this.Rol = new System.Windows.Forms.Label();
             this.btmInforme = new System.Windows.Forms.Button();
+            this.BtmReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -87,11 +88,25 @@
             this.btmInforme.UseVisualStyleBackColor = true;
             this.btmInforme.Click += new System.EventHandler(this.btmInforme_Click);
             // 
+            // BtmReturn
+            // 
+            this.BtmReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtmReturn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtmReturn.ForeColor = System.Drawing.Color.White;
+            this.BtmReturn.Location = new System.Drawing.Point(12, 239);
+            this.BtmReturn.Name = "BtmReturn";
+            this.BtmReturn.Size = new System.Drawing.Size(130, 41);
+            this.BtmReturn.TabIndex = 23;
+            this.BtmReturn.Text = "Regresar";
+            this.BtmReturn.UseVisualStyleBackColor = false;
+            this.BtmReturn.Click += new System.EventHandler(this.BtmReturn_Click);
+            // 
             // FrmReport2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 213);
+            this.ClientSize = new System.Drawing.Size(743, 292);
+            this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.btmInforme);
             this.Controls.Add(this.CbRole);
             this.Controls.Add(this.Rol);
@@ -113,5 +128,6 @@
         private System.Windows.Forms.ComboBox CbRole;
         private System.Windows.Forms.Label Rol;
         private System.Windows.Forms.Button btmInforme;
+        private System.Windows.Forms.Button BtmReturn;
     }
 }

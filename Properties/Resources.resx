@@ -157,6 +157,9 @@
   <data name="Roles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Roles.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="salida" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\salida.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="trabajo_en_equipo__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trabajo-en-equipo (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

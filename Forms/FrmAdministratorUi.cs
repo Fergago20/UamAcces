@@ -1,5 +1,6 @@
 ﻿using MaterialSkin.Controls;
 using System;
+using System.Windows.Forms;
 using UamAcces.Forms;
 
 namespace UamAcces.Formularios
@@ -33,6 +34,19 @@ namespace UamAcces.Formularios
             this.Hide();
             user.ShowDialog();
             this.Close();
+        }
+
+        private void BtmReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Salir?", "Salida",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Input input = new Input();
+                this.Hide();
+                input.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

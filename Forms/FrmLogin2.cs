@@ -22,6 +22,7 @@ namespace UamAcces.Formularios
             administration.ReadFile();
             admincurrent.ReadFile();
             TextBoxTab(this);
+            TbCif.Focus();
         }
 
         private void BtmIngresar_Click(object sender, EventArgs e)
@@ -51,6 +52,7 @@ namespace UamAcces.Formularios
                 {
                     MessageBox.Show("CIF o Contraseña incorrecta", "Datos erróneos",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TbCif.Focus();
                 }
 
             }
@@ -102,6 +104,19 @@ namespace UamAcces.Formularios
             if (e.KeyCode == Keys.Tab)
             {
                 e.IsInputKey = true;
+            }
+        }
+
+        private void BtmReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Salir?", "Salida",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Input input = new Input();
+                this.Hide();
+                input.ShowDialog();
+                this.Close();
             }
         }
     }

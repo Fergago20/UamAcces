@@ -67,5 +67,18 @@ namespace UamAcces.Forms
 
             finalReport.ShowDialog();
         }
+
+        private void BtmReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Salir?", "Salida",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                AdministratorUi admin = new AdministratorUi();
+                this.Hide();
+                admin.ShowDialog();
+                this.Close();
+            }
+        }
     }
 }

@@ -25,11 +25,12 @@ namespace UamAcces.models
 
         public void DeleteUser(int cif)
         {
-            foreach (var user in users)
+            for (int i = 0; i < users.Count; i++)
             {
-                if (cif == user.CIF)
+                if (cif == users[i].CIF)
                 {
-                    users.Remove(user);
+                    users.RemoveAt(i);
+                    break; 
                 }
             }
             SaveUsers();

@@ -21,6 +21,7 @@ namespace UamAcces
             InitializeComponent();
             this.KeyPreview=true;
             TextBoxTab(this);
+            TbCif.Focus();
         }
 
 
@@ -43,6 +44,7 @@ namespace UamAcces
                 {
                     MessageBox.Show("Contraseña o CIF incorrecto", "Error de datos",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TbCif.Focus();
                 }
             }
             catch (Exception ex)
@@ -93,6 +95,19 @@ namespace UamAcces
                 MessageBox.Show("No se introducen letras", "Error de datos",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Handled = true;
+            }
+        }
+
+        private void BtmReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Salir?", "Salida",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Input input = new Input();
+                this.Hide();
+                input.ShowDialog();
+                this.Close();
             }
         }
     }

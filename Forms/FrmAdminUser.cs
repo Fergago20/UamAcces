@@ -22,6 +22,7 @@ namespace UamAcces.Formularios
             administration.ReadFile();
             Option();
             TextBoxTab(this);
+            TbCif.Focus();
         }
 
         private void Option()
@@ -45,23 +46,25 @@ namespace UamAcces.Formularios
         {
             foreach (Control control in controlFather.Controls)
             {
-                if (control is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
+                if (control is TextBox textBox)
                 {
-                    MessageBox.Show($"El campo '{textBox.Name}' está vacío.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
+                    
+                    if (textBox.Name != "TbReason" && string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                          return false;
+                    }
                 }
 
                 if (control is ComboBox comboBox && comboBox.SelectedIndex == -1)
                 {
-                    MessageBox.Show($"Debes seleccionar una opción en '{comboBox.Name}'.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
+                     return false;
                 }
 
                 if (control is CheckBox checkBox && !checkBox.Checked)
                 {
-                    MessageBox.Show($"El checkbox '{checkBox.Name}' debe estar marcado.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return false;
+                     return false;
                 }
+
                 if (control.HasChildren)
                 {
                     if (!VerificationCamp(control))
@@ -87,7 +90,13 @@ namespace UamAcces.Formularios
                 {
                     administration.AddUser(user, user.CIF, user.Password);
                     Clean();
-                }  
+                    TbCif.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ingrese todos los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             Clean();
         }
@@ -112,12 +121,13 @@ namespace UamAcces.Formularios
 
         private void BtmDelete_Click(object sender, EventArgs e)
         {
+            int cif = int.Parse(TbCif.Text);
             try
             {
                 DialogResult answer = MessageBox.Show("¿Seguro desea eliminar a este usuario?", "Eliminar",
                      MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (answer == DialogResult.Yes)
-                { administration.DeleteUser(int.Parse(TbCif.Text)); Clean(); }
+                { administration.DeleteUser(cif); Clean(); TbCif.Focus(); }
             }
             catch (Exception ex)
             {
@@ -128,14 +138,29 @@ namespace UamAcces.Formularios
 
         private void BtmUpdate_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user = UserData();
-            DialogResult answer = MessageBox.Show("¿Seguro desea actualizar a este usuario?", "Eliminar",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (answer == DialogResult.Yes)
-            { administration.Update(user, user.CIF); Clean(); }
+            try 
+            {
+                User user = new User();
+                if (VerificationCamp(this))
+                {
+                    user = UserData();
+                    DialogResult answer = MessageBox.Show("¿Seguro desea actualizar a este usuario?", "Eliminar",
+                             MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (answer == DialogResult.Yes)
+                    { administration.Update(user, user.CIF); Clean(); }
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese todos los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de entrada de datos",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private User UserData()
         {
             try
@@ -183,11 +208,14 @@ namespace UamAcces.Formularios
         {
             foreach (Control control in parent.Controls)
             {
-                if (control is TextBox textBox)
+                
+                if (control is TextBox || control is ComboBox || control is RadioButton)
                 {
-                    textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+                    control.PreviewKeyDown -= Control_PreviewKeyDown;
+                    control.PreviewKeyDown += Control_PreviewKeyDown;
                 }
 
+              
                 if (control.HasChildren)
                 {
                     TextBoxTab(control);
@@ -195,13 +223,25 @@ namespace UamAcces.Formularios
             }
         }
 
-        private void TextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void Control_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Tab)
             {
-                e.IsInputKey = true;
+                e.IsInputKey = true; 
+                Control currentControl = (Control)sender;
+                bool forward = !e.Shift; 
+
+                
+                Control parent = currentControl.Parent;
+                while (!parent.SelectNextControl(currentControl, forward, true, true, false))
+                {
+                    
+                    if (parent.Parent == null) break;
+                    parent = parent.Parent;
+                }
             }
         }
+        
 
         private void TbCif_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -220,6 +260,42 @@ namespace UamAcces.Formularios
                 MessageBox.Show("No se introducen letras", "Error de datos",
                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 e.Handled = true;
+            }
+        }
+
+
+        private void BtmReturn_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Salir?", "Salida",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                AdministratorUi admin = new AdministratorUi();
+                this.Hide();
+                admin.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private void CbRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CbRole.SelectedItem != null)
+            {
+                
+                string selectedRole = CbRole.SelectedItem.ToString();
+
+                if (selectedRole == "Externo")
+                {
+                   
+                    CbFaculty.SelectedItem = "No Ligado"; 
+                    CbFaculty.Enabled = false;
+                    TbReason.Enabled = true;
+                }
+                else
+                {
+                    CbFaculty.Enabled = true;
+                    TbReason.Enabled = false;
+                }
             }
         }
     }

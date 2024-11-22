@@ -39,6 +39,7 @@
             this.BtmINgresar = new System.Windows.Forms.Button();
             this.TbPassword = new System.Windows.Forms.TextBox();
             this.TbCif = new System.Windows.Forms.TextBox();
+            this.BtmReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,12 +131,26 @@
             this.TbCif.TabIndex = 19;
             this.TbCif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Letter);
             // 
+            // BtmReturn
+            // 
+            this.BtmReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.BtmReturn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtmReturn.ForeColor = System.Drawing.Color.White;
+            this.BtmReturn.Location = new System.Drawing.Point(26, 402);
+            this.BtmReturn.Name = "BtmReturn";
+            this.BtmReturn.Size = new System.Drawing.Size(130, 41);
+            this.BtmReturn.TabIndex = 21;
+            this.BtmReturn.Text = "Regresar";
+            this.BtmReturn.UseVisualStyleBackColor = false;
+            this.BtmReturn.Click += new System.EventHandler(this.BtmReturn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
             this.ClientSize = new System.Drawing.Size(793, 484);
+            this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.TbPassword);
             this.Controls.Add(this.TbCif);
             this.Controls.Add(this.BtmINgresar);
@@ -166,6 +181,7 @@
         private System.Windows.Forms.Button BtmINgresar;
         private System.Windows.Forms.TextBox TbPassword;
         private System.Windows.Forms.TextBox TbCif;
+        private System.Windows.Forms.Button BtmReturn;
     }
 }
 

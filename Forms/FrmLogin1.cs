@@ -19,9 +19,9 @@ namespace UamAcces
         public Form1()
         {
             InitializeComponent();
+            TbCif.Focus();
             this.KeyPreview=true;
             TextBoxTab(this);
-            TbCif.Focus();
         }
 
 

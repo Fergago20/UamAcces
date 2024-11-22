@@ -119,7 +119,7 @@
             this.TbPassword.Name = "TbPassword";
             this.TbPassword.PasswordChar = '⁕';
             this.TbPassword.Size = new System.Drawing.Size(183, 27);
-            this.TbPassword.TabIndex = 20;
+            this.TbPassword.TabIndex = 2;
             this.TbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Letter2);
             // 
             // TbCif
@@ -128,7 +128,7 @@
             this.TbCif.Location = new System.Drawing.Point(381, 179);
             this.TbCif.Name = "TbCif";
             this.TbCif.Size = new System.Drawing.Size(183, 27);
-            this.TbCif.TabIndex = 19;
+            this.TbCif.TabIndex = 0;
             this.TbCif.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Letter);
             // 
             // BtmReturn

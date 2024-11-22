@@ -19,10 +19,10 @@ namespace UamAcces.Formularios
         public FrmLogin2()
         {
             InitializeComponent();
+            TbCif.Focus();
             administration.ReadFile();
             admincurrent.ReadFile();
             TextBoxTab(this);
-            TbCif.Focus();
         }
 
         private void BtmIngresar_Click(object sender, EventArgs e)
@@ -63,25 +63,6 @@ namespace UamAcces.Formularios
             }
         }
 
-        private void TbCif_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                MessageBox.Show("No se introducen letras", "Error de datos",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-            }
-        }
-
-        private void TbPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                MessageBox.Show("No se introducen letras", "Error de datos",
-                   MessageBoxButtons.OK, MessageBoxIcon.Error);
-                e.Handled = true;
-            }
-        }
 
         private void TextBoxTab(Control parent)
         {
@@ -117,6 +98,26 @@ namespace UamAcces.Formularios
                 this.Hide();
                 input.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void TbCif_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
+            }
+        }
+
+        private void TbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("No se introducen letras", "Error de datos",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+                e.Handled = true;
             }
         }
     }

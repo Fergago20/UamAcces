@@ -49,13 +49,13 @@ namespace UamAcces.Formularios
                 {
                     if (role == "Todos")
                     {
-                        Report(entrants);
+                        Report(entrants, "DsData", "UamAcces.Reports.RptUsers.rdlc");
                     }
                     else
                     {
                         ReportAdmin reportAdmin = new ReportAdmin();
                         entrants=reportAdmin.Organize(entrants, date1, date2, role);
-                        Report(entrants);
+                        Report(entrants, "DsData", "UamAcces.Reports.RptUsers.rdlc");
                     }
                 }
                 else
@@ -70,14 +70,13 @@ namespace UamAcces.Formularios
             }
         }
 
-        private void Report(List<Entrant> origin)
+        private void Report(List<Entrant> origin, string type, string path)
         {
-            ReportDataSource dataSource = new ReportDataSource("DsData", origin);
+            ReportDataSource dataSource = new ReportDataSource(type, origin);
             FrmFinalReport finalReport = new FrmFinalReport();
             finalReport.reportViewer1.LocalReport.DataSources.Clear();
             finalReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
-            finalReport.reportViewer1.LocalReport.ReportEmbeddedResource =
-                "UamAcces.Reports.RptUsers.rdlc";
+            finalReport.reportViewer1.LocalReport.ReportEmbeddedResource = path;
             finalReport.reportViewer1.RefreshReport();
             
             finalReport.ShowDialog();
@@ -93,6 +92,39 @@ namespace UamAcces.Formularios
                 this.Hide();
                 admin.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void BtmGraphic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime date1 = DtpDate1.Value;
+                DateTime date2 = DtpDate2.Value;
+                string role = CbRole.SelectedItem.ToString();
+                if (date1 < date2 && !string.IsNullOrEmpty(role))
+                {
+                    if (role == "Todos")
+                    {
+                        Report(entrants, "DtGraphic", "UamAcces.Reports.RptGraphic.rdlc");
+                    }
+                    else
+                    {
+                        ReportAdmin reportAdmin = new ReportAdmin();
+                        entrants = reportAdmin.Organize(entrants, date1, date2, role);
+                        Report(entrants, "DtGraphic", "UamAcces.Reports.RptGraphic.rdlc");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Llene correctamente los datos", "Error de datos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error de entradas",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

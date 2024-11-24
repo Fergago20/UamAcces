@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Archivos\AllFile.cs" />
+    <Compile Include="Dao\Filter.cs" />
     <Compile Include="Dao\ReportAdmin.cs" />
     <Compile Include="DataSet\DsEntrant.cs">
       <DependentUpon>DsEntrant.xsd</DependentUpon>
@@ -142,6 +143,12 @@
     </Compile>
     <Compile Include="Dao\Administration.cs" />
     <Compile Include="Dao\AdministrationUser.cs" />
+    <Compile Include="Forms\ViewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\Administrator.cs" />
     <Compile Include="models\User.cs" />
     <Compile Include="models\Entrant.cs" />
@@ -177,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmReport2.resx">
       <DependentUpon>FrmReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -232,6 +242,7 @@
     <None Include="Resources\Roles.txt" />
     <None Include="Resources\Captura_de_pantalla_2024-11-13_2.png" />
     <None Include="Resources\salida.png" />
+    <None Include="Resources\grafico.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

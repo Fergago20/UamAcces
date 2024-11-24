@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UamAcces.Forms;
 using UamAcces.models;
 
 namespace UamAcces.Formularios
@@ -299,6 +300,12 @@ namespace UamAcces.Formularios
                     TbReason.Clear();
                 }
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ViewUser viewUser = new ViewUser();
+            viewUser.Show();
         }
     }
 }

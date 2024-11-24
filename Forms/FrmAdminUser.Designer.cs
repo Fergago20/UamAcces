@@ -54,6 +54,7 @@
             this.TbPassword = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.BtmReturn = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -93,7 +94,7 @@
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 597);
+            this.splitter1.Size = new System.Drawing.Size(3, 629);
             this.splitter1.TabIndex = 15;
             this.splitter1.TabStop = false;
             // 
@@ -172,7 +173,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 504);
+            this.label6.Location = new System.Drawing.Point(29, 529);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(265, 19);
             this.label6.TabIndex = 27;
@@ -183,7 +184,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(37, 541);
+            this.label7.Location = new System.Drawing.Point(29, 566);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(681, 19);
             this.label7.TabIndex = 28;
@@ -313,11 +314,26 @@
             this.BtmReturn.UseVisualStyleBackColor = false;
             this.BtmReturn.Click += new System.EventHandler(this.BtmReturn_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(341, 492);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(140, 16);
+            this.linkLabel1.TabIndex = 39;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Ver todos los usuarios";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 597);
+            this.ClientSize = new System.Drawing.Size(889, 629);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.TbPassword);
             this.Controls.Add(this.label9);
@@ -379,5 +395,6 @@
         private System.Windows.Forms.TextBox TbPassword;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtmReturn;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

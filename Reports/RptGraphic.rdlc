@@ -118,7 +118,7 @@
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Time">
+                <ChartSeries Name="Time1">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>

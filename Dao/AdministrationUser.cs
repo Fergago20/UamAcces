@@ -18,6 +18,8 @@ namespace UamAcces.models
         List<User> users = new List<User>();
         AllFile files = new AllFile();
 
+        public List<User> GetUsers() { return users; }
+
         public void SaveUsers()
         {
             files.SaveUsers(users);

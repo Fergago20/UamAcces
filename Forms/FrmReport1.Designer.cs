@@ -40,6 +40,7 @@
             this.btmInforme = new System.Windows.Forms.Button();
             this.CbRole = new System.Windows.Forms.ComboBox();
             this.BtmReturn = new System.Windows.Forms.Button();
+            this.BtmGraphic = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +129,7 @@
             // btmInforme
             // 
             this.btmInforme.Image = global::UamAcces.Properties.Resources.formulario_de_llenado;
-            this.btmInforme.Location = new System.Drawing.Point(412, 329);
+            this.btmInforme.Location = new System.Drawing.Point(338, 329);
             this.btmInforme.Name = "btmInforme";
             this.btmInforme.Size = new System.Drawing.Size(104, 111);
             this.btmInforme.TabIndex = 13;
@@ -137,6 +138,7 @@
             // 
             // CbRole
             // 
+            this.CbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbRole.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbRole.FormattingEnabled = true;
             this.CbRole.Location = new System.Drawing.Point(338, 276);
@@ -157,11 +159,22 @@
             this.BtmReturn.UseVisualStyleBackColor = false;
             this.BtmReturn.Click += new System.EventHandler(this.BtmReturn_Click);
             // 
+            // BtmGraphic
+            // 
+            this.BtmGraphic.Image = global::UamAcces.Properties.Resources.grafico;
+            this.BtmGraphic.Location = new System.Drawing.Point(498, 329);
+            this.BtmGraphic.Name = "BtmGraphic";
+            this.BtmGraphic.Size = new System.Drawing.Size(104, 111);
+            this.BtmGraphic.TabIndex = 23;
+            this.BtmGraphic.UseVisualStyleBackColor = true;
+            this.BtmGraphic.Click += new System.EventHandler(this.BtmGraphic_Click);
+            // 
             // Report1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 461);
+            this.Controls.Add(this.BtmGraphic);
             this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.CbRole);
             this.Controls.Add(this.btmInforme);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Button btmInforme;
         private System.Windows.Forms.ComboBox CbRole;
         private System.Windows.Forms.Button BtmReturn;
+        private System.Windows.Forms.Button BtmGraphic;
     }
 }

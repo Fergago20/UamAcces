@@ -159,6 +159,7 @@
             // 
             // CbFaculty
             // 
+            this.CbFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbFaculty.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbFaculty.FormattingEnabled = true;
             this.CbFaculty.Location = new System.Drawing.Point(309, 448);
@@ -254,6 +255,7 @@
             // 
             // CbRole
             // 
+            this.CbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbRole.FormattingEnabled = true;
             this.CbRole.Location = new System.Drawing.Point(309, 333);
             this.CbRole.Name = "CbRole";

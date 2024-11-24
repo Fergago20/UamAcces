@@ -295,6 +295,8 @@ namespace UamAcces.Formularios
                 {
                     CbFaculty.Enabled = true;
                     TbReason.Enabled = false;
+                    CbFaculty.SelectedIndex = -1;
+                    TbReason.Clear();
                 }
             }
         }

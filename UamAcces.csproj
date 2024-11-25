@@ -81,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsEntrant.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\DsUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmAdminUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +203,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\RptAllUser.rdlc" />
     <EmbeddedResource Include="Reports\RptEntrant.rdlc" />
     <EmbeddedResource Include="Reports\RptGraphic.rdlc" />
     <EmbeddedResource Include="Reports\RptUsers.rdlc" />
@@ -211,6 +217,17 @@
     </None>
     <None Include="DataSet\DsEntrant.xss">
       <DependentUpon>DsEntrant.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsUser.xsc">
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DsUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsUser.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DsUser.xss">
+      <DependentUpon>DsUser.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

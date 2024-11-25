@@ -75,17 +75,19 @@ namespace UamAcces.Forms
 
         private void btmInforme_Click(object sender, EventArgs e)
         {
-            
+            string faculty = CbFaculty.SelectedItem.ToString();
+            string role = CbRole.SelectedItem.ToString();
+            Report(filter.FilterData(users, faculty, role));
         }
 
-        private void Report(List<Entrant> origin)
+        private void Report(List<User> origin)
         {
-            ReportDataSource dataSource = new ReportDataSource("DtEntrant", origin);
+            ReportDataSource dataSource = new ReportDataSource("DsAllUser", origin);
             FrmFinalReport finalReport = new FrmFinalReport();
             finalReport.reportViewer1.LocalReport.DataSources.Clear();
             finalReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
             finalReport.reportViewer1.LocalReport.ReportEmbeddedResource =
-                "UamAcces.Reports.RptEntrant.rdlc";
+                "UamAcces.Reports.RptAllUser.rdlc";
             finalReport.reportViewer1.RefreshReport();
 
             finalReport.ShowDialog();

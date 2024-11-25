@@ -58,11 +58,14 @@ namespace UamAcces
         {
             foreach (Control control in parent.Controls)
             {
-                if (control is TextBox textBox)
+
+                if (control is TextBox || control is ComboBox || control is RadioButton)
                 {
-                    textBox.PreviewKeyDown += TextBox_PreviewKeyDown;
+                    control.PreviewKeyDown -= Control_PreviewKeyDown;
+                    control.PreviewKeyDown += Control_PreviewKeyDown;
                 }
-               
+
+
                 if (control.HasChildren)
                 {
                     TextBoxTab(control);
@@ -70,11 +73,22 @@ namespace UamAcces
             }
         }
 
-        private void TextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void Control_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Tab)
             {
-                e.IsInputKey = true; 
+                e.IsInputKey = true;
+                Control currentControl = (Control)sender;
+                bool forward = !e.Shift;
+
+
+                Control parent = currentControl.Parent;
+                while (!parent.SelectNextControl(currentControl, forward, true, true, false))
+                {
+
+                    if (parent.Parent == null) break;
+                    parent = parent.Parent;
+                }
             }
         }
 

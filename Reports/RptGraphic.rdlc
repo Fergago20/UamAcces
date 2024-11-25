@@ -118,7 +118,7 @@
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="Time1">
+                <ChartSeries Name="Time">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
@@ -134,6 +134,7 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
+                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -391,7 +392,6 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
-                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -436,8 +436,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DtGraphic</DataSetName>
-            <Top>0.35137cm</Top>
-            <Left>3.2512cm</Left>
+            <Top>0.66887cm</Top>
+            <Left>3.97087cm</Left>
             <Height>5cm</Height>
             <Width>7.5cm</Width>
             <Style>
@@ -450,7 +450,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.53184in</Height>
+        <Height>3.1485in</Height>
         <Style />
       </Body>
       <Width>6.5in</Width>

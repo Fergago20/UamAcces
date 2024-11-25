@@ -489,8 +489,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DsAllUser</DataSetName>
-        <Top>2.40453cm</Top>
-        <Left>0.85937cm</Left>
+        <Top>0.8382cm</Top>
+        <Left>0.43603cm</Left>
         <Height>1.2cm</Height>
         <Width>17.5cm</Width>
         <Style>
@@ -516,8 +516,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox16</rd:DefaultName>
-        <Top>4.2037cm</Top>
-        <Left>15.85937cm</Left>
+        <Top>2.51037cm</Top>
+        <Left>15.43603cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -531,14 +531,14 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox17">
+      <Textbox Name="Textbox2">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=</Value>
+                <Value>=Globals!ExecutionTime</Value>
                 <Style />
               </TextRun>
             </TextRuns>
@@ -547,9 +547,9 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <rd:DefaultName>Textbox17</rd:DefaultName>
-        <Top>5.2832cm</Top>
-        <Left>15.85937cm</Left>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>3.764cm</Top>
+        <Left>15.43603cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -564,10 +564,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.56667in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.61976in</Width>
+  <Width>7.5531in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -581,7 +581,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Informe de todo los usuarios admitidos</Value>
+                  <Value>Informe Usuarios Admitidos</Value>
                   <Style />
                 </TextRun>
               </TextRuns>
@@ -589,10 +589,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
-          <Top>0.73237cm</Top>
-          <Left>1.5367cm</Left>
+          <Top>0.60537cm</Top>
+          <Left>0.79587cm</Left>
           <Height>0.6cm</Height>
-          <Width>6.54283cm</Width>
+          <Width>5.421cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -626,7 +626,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>42008f04-3b49-4c43-9d78-f785d334298a</rd:DataSourceID>
+      <rd:DataSourceID>6fcfa211-5884-4bff-be63-48feb9d05e6b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -644,24 +644,24 @@
           <DataField>Password</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="LastName">
-          <DataField>LastName</DataField>
+        <Field Name="Name">
+          <DataField>Name</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Faculty">
-          <DataField>Faculty</DataField>
+        <Field Name="LastName">
+          <DataField>LastName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Role">
           <DataField>Role</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Reason">
-          <DataField>Reason</DataField>
+        <Field Name="Faculty">
+          <DataField>Faculty</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="Reason">
+          <DataField>Reason</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -676,5 +676,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>c83f22f8-8cd9-4945-af41-f0bd816f649f</rd:ReportID>
+  <rd:ReportID>cb769aac-be7b-4234-91c4-d80e79d3fe54</rd:ReportID>
 </Report>

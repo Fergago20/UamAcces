@@ -84,6 +84,8 @@ namespace UamAcces.Forms
         {
             ReportDataSource dataSource = new ReportDataSource("DsAllUser", origin);
             FrmFinalReport finalReport = new FrmFinalReport();
+            finalReport.reportViewer1.Reset();
+            finalReport.reportViewer1.LocalReport.ReleaseSandboxAppDomain();
             finalReport.reportViewer1.LocalReport.DataSources.Clear();
             finalReport.reportViewer1.LocalReport.DataSources.Add(dataSource);
             finalReport.reportViewer1.LocalReport.ReportEmbeddedResource =

@@ -283,15 +283,15 @@ namespace UamAcces.DataSet {
             
             private global::System.Data.DataColumn columnPassword;
             
-            private global::System.Data.DataColumn columnLastName;
+            private global::System.Data.DataColumn columnName;
             
-            private global::System.Data.DataColumn columnFaculty;
+            private global::System.Data.DataColumn columnLastName;
             
             private global::System.Data.DataColumn columnRole;
             
-            private global::System.Data.DataColumn columnReason;
+            private global::System.Data.DataColumn columnFaculty;
             
-            private global::System.Data.DataColumn columnName;
+            private global::System.Data.DataColumn columnReason;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -344,17 +344,17 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
+            public global::System.Data.DataColumn NameColumn {
                 get {
-                    return this.columnLastName;
+                    return this.columnName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FacultyColumn {
+            public global::System.Data.DataColumn LastNameColumn {
                 get {
-                    return this.columnFaculty;
+                    return this.columnLastName;
                 }
             }
             
@@ -368,17 +368,17 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ReasonColumn {
+            public global::System.Data.DataColumn FacultyColumn {
                 get {
-                    return this.columnReason;
+                    return this.columnFaculty;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn ReasonColumn {
                 get {
-                    return this.columnName;
+                    return this.columnReason;
                 }
             }
             
@@ -419,16 +419,16 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public UserDtRow AddUserDtRow(int CIF, int Password, string LastName, string Faculty, string Role, string Reason, string Name) {
+            public UserDtRow AddUserDtRow(int CIF, int Password, string Name, string LastName, string Role, string Faculty, string Reason) {
                 UserDtRow rowUserDtRow = ((UserDtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CIF,
                         Password,
+                        Name,
                         LastName,
-                        Faculty,
                         Role,
-                        Reason,
-                        Name};
+                        Faculty,
+                        Reason};
                 rowUserDtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUserDtRow);
                 return rowUserDtRow;
@@ -453,11 +453,11 @@ namespace UamAcces.DataSet {
             internal void InitVars() {
                 this.columnCIF = base.Columns["CIF"];
                 this.columnPassword = base.Columns["Password"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnFaculty = base.Columns["Faculty"];
-                this.columnRole = base.Columns["Role"];
-                this.columnReason = base.Columns["Reason"];
                 this.columnName = base.Columns["Name"];
+                this.columnLastName = base.Columns["LastName"];
+                this.columnRole = base.Columns["Role"];
+                this.columnFaculty = base.Columns["Faculty"];
+                this.columnReason = base.Columns["Reason"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -467,16 +467,16 @@ namespace UamAcces.DataSet {
                 base.Columns.Add(this.columnCIF);
                 this.columnPassword = new global::System.Data.DataColumn("Password", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnFaculty = new global::System.Data.DataColumn("Faculty", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFaculty);
-                this.columnRole = new global::System.Data.DataColumn("Role", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRole);
-                this.columnReason = new global::System.Data.DataColumn("Reason", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReason);
                 this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnName);
+                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLastName);
+                this.columnRole = new global::System.Data.DataColumn("Role", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRole);
+                this.columnFaculty = new global::System.Data.DataColumn("Faculty", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFaculty);
+                this.columnReason = new global::System.Data.DataColumn("Reason", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReason);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -651,6 +651,22 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Name {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserDt.NameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Name\' de la tabla \'UserDt\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserDt.NameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string LastName {
                 get {
                     try {
@@ -662,22 +678,6 @@ namespace UamAcces.DataSet {
                 }
                 set {
                     this[this.tableUserDt.LastNameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Faculty {
-                get {
-                    try {
-                        return ((string)(this[this.tableUserDt.FacultyColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Faculty\' de la tabla \'UserDt\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUserDt.FacultyColumn] = value;
                 }
             }
             
@@ -699,6 +699,22 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Faculty {
+                get {
+                    try {
+                        return ((string)(this[this.tableUserDt.FacultyColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Faculty\' de la tabla \'UserDt\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUserDt.FacultyColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string Reason {
                 get {
                     try {
@@ -710,22 +726,6 @@ namespace UamAcces.DataSet {
                 }
                 set {
                     this[this.tableUserDt.ReasonColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    try {
-                        return ((string)(this[this.tableUserDt.NameColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Name\' de la tabla \'UserDt\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUserDt.NameColumn] = value;
                 }
             }
             
@@ -755,6 +755,18 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsNameNull() {
+                return this.IsNull(this.tableUserDt.NameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetNameNull() {
+                this[this.tableUserDt.NameColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsLastNameNull() {
                 return this.IsNull(this.tableUserDt.LastNameColumn);
             }
@@ -763,18 +775,6 @@ namespace UamAcces.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetLastNameNull() {
                 this[this.tableUserDt.LastNameColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFacultyNull() {
-                return this.IsNull(this.tableUserDt.FacultyColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFacultyNull() {
-                this[this.tableUserDt.FacultyColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -791,6 +791,18 @@ namespace UamAcces.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFacultyNull() {
+                return this.IsNull(this.tableUserDt.FacultyColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFacultyNull() {
+                this[this.tableUserDt.FacultyColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsReasonNull() {
                 return this.IsNull(this.tableUserDt.ReasonColumn);
             }
@@ -799,18 +811,6 @@ namespace UamAcces.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetReasonNull() {
                 this[this.tableUserDt.ReasonColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNameNull() {
-                return this.IsNull(this.tableUserDt.NameColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNameNull() {
-                this[this.tableUserDt.NameColumn] = global::System.Convert.DBNull;
             }
         }
         

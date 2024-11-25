@@ -81,6 +81,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DsEntrant.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet\DsUser.cs">
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet\DsUser.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

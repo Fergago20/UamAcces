@@ -25,6 +25,7 @@ namespace UamAcces.Forms
             InitializeComponent();
             Options();
             entrants= administration.GetUsers();
+            CbRole.SelectedItem = "Todos";
         }
 
         private void Options()

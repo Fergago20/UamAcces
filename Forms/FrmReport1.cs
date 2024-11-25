@@ -24,6 +24,7 @@ namespace UamAcces.Formularios
             administration.ReadFile();
             entrants= administration.GetUsers();
             Options();
+            CbRole.SelectedItem = "Todos";
         }
 
         private void Options()

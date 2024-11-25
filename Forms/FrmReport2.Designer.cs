@@ -43,7 +43,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 59);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(159, 156);
             this.panel1.TabIndex = 2;
@@ -60,6 +60,7 @@
             // 
             // CbRole
             // 
+            this.CbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbRole.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbRole.FormattingEnabled = true;
             this.CbRole.Location = new System.Drawing.Point(256, 126);
@@ -93,7 +94,7 @@
             this.BtmReturn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
             this.BtmReturn.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtmReturn.ForeColor = System.Drawing.Color.White;
-            this.BtmReturn.Location = new System.Drawing.Point(12, 239);
+            this.BtmReturn.Location = new System.Drawing.Point(12, 259);
             this.BtmReturn.Name = "BtmReturn";
             this.BtmReturn.Size = new System.Drawing.Size(130, 41);
             this.BtmReturn.TabIndex = 23;
@@ -105,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 292);
+            this.ClientSize = new System.Drawing.Size(743, 312);
             this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.btmInforme);
             this.Controls.Add(this.CbRole);

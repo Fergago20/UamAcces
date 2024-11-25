@@ -55,8 +55,9 @@ namespace UamAcces.Formularios
                     else
                     {
                         ReportAdmin reportAdmin = new ReportAdmin();
-                        entrants=reportAdmin.Organize(entrants, date1, date2, role);
-                        Report(entrants, "DsData", "UamAcces.Reports.RptUsers.rdlc");
+                        List<Entrant> entrants1 = new List<Entrant>();
+                        entrants1=reportAdmin.Organize(entrants, date1, date2, role);
+                        Report(entrants1, "DsData", "UamAcces.Reports.RptUsers.rdlc");
                     }
                 }
                 else
@@ -112,7 +113,8 @@ namespace UamAcces.Formularios
                     else
                     {
                         ReportAdmin reportAdmin = new ReportAdmin();
-                        entrants = reportAdmin.Organize(entrants, date1, date2, role);
+                        List<Entrant> entrants1 = new List<Entrant>();
+                        entrants1 = reportAdmin.Organize(entrants, date1, date2, role);
                         Report(entrants, "DtGraphic", "UamAcces.Reports.RptGraphic.rdlc");
                     }
                 }

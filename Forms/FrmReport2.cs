@@ -41,13 +41,15 @@ namespace UamAcces.Forms
 
         private void btmInforme_Click(object sender, EventArgs e)
         {
+            List<Entrant> entrants2 = new List<Entrant>();
             string role= CbRole.SelectedItem.ToString();
             if (!string.IsNullOrEmpty(role))
             {
+
                 ReportAdmin reportAdmin = new ReportAdmin();
-                entrants = reportAdmin.Organize2(entrants, role);
-                reportAdmin.BubbleSort(entrants);
-                Report(entrants);
+                entrants2 = reportAdmin.Organize2(entrants, role);
+                reportAdmin.BubbleSort(entrants2);
+                Report(entrants2);
             }
             else
             {

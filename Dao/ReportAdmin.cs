@@ -23,19 +23,27 @@ namespace UamAcces.Dao
             return entrants2;
         }
 
-        public List<Entrant> Organize2(List<Entrant>entrants, string role)
+        public List<Entrant> Organize2(List<Entrant> entrants, string role)
         {
             List<Entrant> entrants2 = new List<Entrant>();
+
             foreach (var entrant in entrants)
             {
-
-                if (entrant.Role == role && entrant.Exit == DateTime.MinValue)
+                
+                if (role == "Todos" && entrant.Exit == DateTime.MinValue)
+                {
+                    entrants2.Add(entrant);
+                }
+                
+                else if (entrant.Role == role && entrant.Exit == DateTime.MinValue)
                 {
                     entrants2.Add(entrant);
                 }
             }
+
             return entrants2;
         }
+
 
         public void BubbleSort(List<Entrant> entrants)
         {

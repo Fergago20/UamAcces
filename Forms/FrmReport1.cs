@@ -18,6 +18,7 @@ namespace UamAcces.Formularios
     {
         Administration administration= new Administration();
         List<Entrant> entrants = new List<Entrant>();
+        DateTime limit = DateTime.Now.AddDays(1).Date;
         public Report1()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace UamAcces.Formularios
                 DateTime date1 = DtpDate1.Value;
                 DateTime date2 = DtpDate2.Value;
                 string role = CbRole.SelectedItem.ToString();
-                if (date1 < date2 && !string.IsNullOrEmpty(role))
+                if (date1 < date2 && !string.IsNullOrEmpty(role) && date2<limit)
                 {
                     if (role == "Todos")
                     {
@@ -101,10 +102,11 @@ namespace UamAcces.Formularios
         {
             try
             {
+               
                 DateTime date1 = DtpDate1.Value;
                 DateTime date2 = DtpDate2.Value;
                 string role = CbRole.SelectedItem.ToString();
-                if (date1 < date2 && !string.IsNullOrEmpty(role))
+                if ((date1 < date2) && (!string.IsNullOrEmpty(role)) && date2< limit)
                 {
                     if (role == "Todos")
                     {
@@ -115,7 +117,7 @@ namespace UamAcces.Formularios
                         ReportAdmin reportAdmin = new ReportAdmin();
                         List<Entrant> entrants1 = new List<Entrant>();
                         entrants1 = reportAdmin.Organize(entrants, date1, date2, role);
-                        Report(entrants, "DtGraphic", "UamAcces.Reports.RptGraphic.rdlc");
+                        Report(entrants1, "DtGraphic", "UamAcces.Reports.RptGraphic.rdlc");
                     }
                 }
                 else

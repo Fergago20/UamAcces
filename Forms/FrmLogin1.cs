@@ -49,7 +49,7 @@ namespace UamAcces
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error de Inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese bien los datos", "Error de Inicio de sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

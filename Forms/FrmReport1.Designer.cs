@@ -35,12 +35,12 @@
             this.Desde = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DtpDate1 = new System.Windows.Forms.DateTimePicker();
-            this.DtpDate2 = new System.Windows.Forms.DateTimePicker();
             this.Rol = new System.Windows.Forms.Label();
             this.btmInforme = new System.Windows.Forms.Button();
             this.CbRole = new System.Windows.Forms.ComboBox();
             this.BtmReturn = new System.Windows.Forms.Button();
             this.BtmGraphic = new System.Windows.Forms.Button();
+            this.DtpDate2 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -102,18 +102,11 @@
             // 
             this.DtpDate1.CalendarFont = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpDate1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DtpDate1.Location = new System.Drawing.Point(338, 168);
             this.DtpDate1.Name = "DtpDate1";
             this.DtpDate1.Size = new System.Drawing.Size(264, 25);
             this.DtpDate1.TabIndex = 5;
-            // 
-            // DtpDate2
-            // 
-            this.DtpDate2.CalendarFont = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DtpDate2.Location = new System.Drawing.Point(338, 223);
-            this.DtpDate2.Name = "DtpDate2";
-            this.DtpDate2.Size = new System.Drawing.Size(264, 22);
-            this.DtpDate2.TabIndex = 6;
             // 
             // Rol
             // 
@@ -169,17 +162,27 @@
             this.BtmGraphic.UseVisualStyleBackColor = true;
             this.BtmGraphic.Click += new System.EventHandler(this.BtmGraphic_Click);
             // 
+            // DtpDate2
+            // 
+            this.DtpDate2.CalendarFont = new System.Drawing.Font("Arial Narrow", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DtpDate2.Location = new System.Drawing.Point(338, 219);
+            this.DtpDate2.Name = "DtpDate2";
+            this.DtpDate2.Size = new System.Drawing.Size(264, 25);
+            this.DtpDate2.TabIndex = 24;
+            // 
             // Report1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(731, 461);
+            this.Controls.Add(this.DtpDate2);
             this.Controls.Add(this.BtmGraphic);
             this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.CbRole);
             this.Controls.Add(this.btmInforme);
             this.Controls.Add(this.Rol);
-            this.Controls.Add(this.DtpDate2);
             this.Controls.Add(this.DtpDate1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Desde);
@@ -204,11 +207,11 @@
         private System.Windows.Forms.Label Desde;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker DtpDate1;
-        private System.Windows.Forms.DateTimePicker DtpDate2;
         private System.Windows.Forms.Label Rol;
         private System.Windows.Forms.Button btmInforme;
         private System.Windows.Forms.ComboBox CbRole;
         private System.Windows.Forms.Button BtmReturn;
         private System.Windows.Forms.Button BtmGraphic;
+        private System.Windows.Forms.DateTimePicker DtpDate2;
     }
 }

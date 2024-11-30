@@ -15,7 +15,11 @@ namespace UamAcces.Dao
             foreach (var entrant in entrants)
             {
 
-                if (entrant.Role == role && (entrant.Entry < date2 && entrant.Entry > date1))
+                bool roleMatches = role == "Todos" || entrant.Role == role;
+
+                bool dateInRange = entrant.Entry > date1 && entrant.Entry < date2;
+
+                if (roleMatches && dateInRange)
                 {
                     entrants2.Add(entrant);
                 }

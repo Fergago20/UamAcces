@@ -22,6 +22,8 @@ namespace UamAcces.Formularios
         public Report1()
         {
             InitializeComponent();
+            DtpDate1.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            DtpDate2.CustomFormat = "dd/MM/yyyy HH:mm:ss";
             administration.ReadFile();
             entrants= administration.GetUsers();
             Options();
@@ -44,22 +46,18 @@ namespace UamAcces.Formularios
         {
             try
             {
+                List<Entrant> entrants1 = new List<Entrant>();
                 DateTime date1 = DtpDate1.Value;
                 DateTime date2 = DtpDate2.Value;
                 string role = CbRole.SelectedItem.ToString();
                 if (date1 < date2 && !string.IsNullOrEmpty(role) && date2<limit)
                 {
-                    if (role == "Todos")
-                    {
-                        Report(entrants, "DsData", "UamAcces.Reports.RptUsers.rdlc");
-                    }
-                    else
-                    {
+                    
                         ReportAdmin reportAdmin = new ReportAdmin();
-                        List<Entrant> entrants1 = new List<Entrant>();
+                        
                         entrants1=reportAdmin.Organize(entrants, date1, date2, role);
                         Report(entrants1, "DsData", "UamAcces.Reports.RptUsers.rdlc");
-                    }
+                   
                 }
                 else
                 {

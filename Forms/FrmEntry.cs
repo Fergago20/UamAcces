@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,30 +37,58 @@ namespace UamAcces.Formularios
             lblDia.Text = $"Día: {DateTime.Today.ToString("dd/MM/yyyy")}";
         }
 
+        public bool VerificationCamp(Control container)
+        {
+            if (string.IsNullOrEmpty(wayaccess) && string.IsNullOrEmpty(wayaccess))
+            {
+                if (TbPlate.Enabled == true && string.IsNullOrEmpty(TbPlate.Text))
+                {
+                    return false;
+                }
+                else { return false; }
+            }
+            else
+            {
+                if (TbPlate.Enabled == true && string.IsNullOrEmpty(TbPlate.Text))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
         private void BtmEntry_Click(object sender, EventArgs e)
         {
             try
             {
-                Entrant entrant = new Entrant();
-                entrant.CIF = user.CIF;
-                entrant.Name = user.Name;
-                entrant.LastName = user.LastName;
-                entrant.Role = user.Role;
-                entrant.Faculty = user.Faculty;
-                entrant.Entry=DateTime.Now;
-                entrant.EntryPath = wayaccess;
-                entrant.EntryType= typeaccess;
-                entrant.Plate= TbPlate.Text;
-
-                DialogResult aswer = MessageBox.Show("¿Seguro desea marcar asistencia?", "Asistencia",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (aswer == DialogResult.Yes)
+                if (VerificationCamp(this))
                 {
-                    administration.Add(entrant);
-                    Input input = new Input();
-                    this.Hide();
-                    input.ShowDialog();
-                    this.Close();
+                    Entrant entrant = new Entrant();
+                    entrant.CIF = user.CIF;
+                    entrant.Name = user.Name;
+                    entrant.LastName = user.LastName;
+                    entrant.Role = user.Role;
+                    entrant.Faculty = user.Faculty;
+                    entrant.Entry = DateTime.Now;
+                    entrant.EntryPath = wayaccess;
+                    entrant.EntryType = typeaccess;
+                    entrant.Plate = TbPlate.Text;
+
+                    DialogResult aswer = MessageBox.Show("¿Seguro desea marcar asistencia?", "Asistencia",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (aswer == DialogResult.Yes)
+                    {
+                        administration.Add(entrant);
+                        Input input = new Input();
+                        this.Hide();
+                        input.ShowDialog();
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Llene los datos solicitados", "Error de Datos",MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
                 
 

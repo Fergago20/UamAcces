@@ -58,7 +58,7 @@ namespace UamAcces.Formularios
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString(), "Error de Datos", MessageBoxButtons.OK
+                MessageBox.Show("Ingrese bien los datos", "Error de Datos", MessageBoxButtons.OK
                     , MessageBoxIcon.Error);
             }
         }

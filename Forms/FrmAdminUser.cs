@@ -45,46 +45,45 @@ namespace UamAcces.Formularios
 
         private bool VerificationCamp(Control controlFather)
         {
-            foreach (Control control in controlFather.Controls)
+            foreach (Control control in controlFather.Controls) 
             {
+                if (!control.Enabled) continue; 
+
                 if (control is TextBox textBox)
                 {
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                        return false; 
+                }
+                else if (control is CheckBox checkBox)
+                {
+                    if (!checkBox.Checked)
+                        return false; 
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    if (comboBox.SelectedIndex < 0)
+                        return false; 
+                }
+                else if (control.HasChildren)
+                {
                     
-                    if (textBox.Name != "TbReason" && string.IsNullOrWhiteSpace(textBox.Text))
-                    {
-                          return false;
-                    }
-                }
-
-                if (control is ComboBox comboBox && comboBox.SelectedIndex == -1)
-                {
-                     return false;
-                }
-
-                if (control is CheckBox checkBox && !checkBox.Checked)
-                {
-                     return false;
-                }
-
-                if (control.HasChildren)
-                {
                     if (!VerificationCamp(control))
-                    {
                         return false;
-                    }
                 }
             }
+
             return true;
         }
+
 
 
         private void AddUser_Click(object sender, EventArgs e)
         {
            
                 User user = new User();
-                user= UserData();
             if(VerificationCamp(this))
-            { 
+            {
+                user = UserData();
                 DialogResult aswer= MessageBox.Show("¿Seguro desea agregar a este usuario?", "Agregar",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (aswer == DialogResult.Yes)
@@ -99,7 +98,7 @@ namespace UamAcces.Formularios
                 MessageBox.Show("Ingrese todos los datos", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Clean();
+            
         }
 
         private void LookUser_Click(object sender, EventArgs e)

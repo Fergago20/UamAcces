@@ -17,10 +17,10 @@ namespace UamAcces.Formularios
 {
     public partial class Entry : MaterialForm
     {
-        Administration administration= new Administration();
+        Administration administration = new Administration();
         User user = new User();
         string typeaccess, wayaccess;
-        public Entry( User user1)
+        public Entry(User user1)
         {
             InitializeComponent();
             administration.ReadFile();
@@ -39,22 +39,48 @@ namespace UamAcces.Formularios
 
         public bool VerificationCamp(Control container)
         {
-            if (string.IsNullOrEmpty(wayaccess) && string.IsNullOrEmpty(wayaccess))
+            if (string.IsNullOrEmpty(wayaccess) || string.IsNullOrEmpty(typeaccess))
             {
-                if (TbPlate.Enabled == true && string.IsNullOrEmpty(TbPlate.Text))
-                {
-                    return false;
-                }
-                else { return false; }
+                MessageBox.Show("Llene los datos solicitados", "Error de Datos", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                return false;
             }
             else
             {
-                if (TbPlate.Enabled == true && string.IsNullOrEmpty(TbPlate.Text))
+                if (TbPlate.Enabled == true && !IsValidPlate(TbPlate.Text))
                 {
                     return false;
                 }
             }
             return true;
+        }
+
+        static bool IsValidPlate(string input)
+        {
+            
+            if (input.Length != 8)
+            {
+                MessageBox.Show("Placa no existente", "Error de Placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+
+            }
+
+            
+            int letterCount = input.Count(char.IsLetter);
+            int numberCount = input.Count(char.IsDigit);
+
+            if (letterCount >= 1 && numberCount >= 2)
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Placa no existente", "Error de Placa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            
+           
         }
 
         private void BtmEntry_Click(object sender, EventArgs e)
@@ -85,11 +111,6 @@ namespace UamAcces.Formularios
                         this.Close();
                     }
                 }
-                else
-                {
-                    MessageBox.Show("Llene los datos solicitados", "Error de Datos",MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                }
                 
 
             }catch(Exception ex) 
@@ -119,6 +140,7 @@ namespace UamAcces.Formularios
 
         private void RbPedestrian_CheckedChanged(object sender, EventArgs e)
         {
+            TbPlate.Text = "";
             TbPlate.Enabled = false;
             typeaccess = RbPedestrian.Text;
         }

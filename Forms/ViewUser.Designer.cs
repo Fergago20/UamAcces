@@ -120,11 +120,12 @@
             // DgvUser
             // 
             this.DgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvUser.Location = new System.Drawing.Point(188, 274);
+            this.DgvUser.Location = new System.Drawing.Point(31, 274);
             this.DgvUser.Name = "DgvUser";
+            this.DgvUser.ReadOnly = true;
             this.DgvUser.RowHeadersWidth = 51;
             this.DgvUser.RowTemplate.Height = 24;
-            this.DgvUser.Size = new System.Drawing.Size(319, 150);
+            this.DgvUser.Size = new System.Drawing.Size(744, 150);
             this.DgvUser.TabIndex = 32;
             // 
             // btmInforme

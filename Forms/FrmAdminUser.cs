@@ -164,10 +164,18 @@ namespace UamAcces.Formularios
                 if (VerificationCamp(this))
                 {
                     user = UserData();
-                    DialogResult answer = MessageBox.Show("¿Seguro desea actualizar a este usuario?", "Eliminar",
+                    if (VerificationLong(user.CIF, user.Password))
+                    {
+                        DialogResult answer = MessageBox.Show("¿Seguro desea actualizar a este usuario?", "Eliminar",
                              MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (answer == DialogResult.Yes)
-                    { administration.Update(user, user.CIF); Clean(); }
+                        if (answer == DialogResult.Yes)
+                        { administration.Update(user, user.CIF); Clean(); }
+                    }
+                    else
+                    {
+                        MessageBox.Show("La longitud del cif y la contraseña deben ser mayor de 4", "Error",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {

@@ -91,6 +91,16 @@ namespace UamAcces.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Captura_de_pantalla_2024_11_13_2 {
+            get {
+                object obj = ResourceManager.GetObject("Captura_de_pantalla_2024_11_13_2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cerrar_sesion {

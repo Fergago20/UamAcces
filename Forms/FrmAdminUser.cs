@@ -43,6 +43,18 @@ namespace UamAcces.Formularios
             CbRole.Items.AddRange(roles);
         }
 
+        private bool VerificationLong(int cif, int password)
+        {
+            int long1= cif.ToString().Length;
+            int long2= password.ToString().Length;
+
+            if(long1>= 4 && long2 >= 4)
+            {
+                return true;
+            }
+            return false;
+        }
+
         private bool VerificationCamp(Control controlFather)
         {
             foreach (Control control in controlFather.Controls) 
@@ -84,13 +96,21 @@ namespace UamAcces.Formularios
             if(VerificationCamp(this))
             {
                 user = UserData();
-                DialogResult aswer= MessageBox.Show("¿Seguro desea agregar a este usuario?", "Agregar",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (aswer == DialogResult.Yes)
+                if (VerificationLong(user.CIF, user.Password))
                 {
-                    administration.AddUser(user, user.CIF, user.Password);
-                    Clean();
-                    TbCif.Focus();
+                    DialogResult aswer = MessageBox.Show("¿Seguro desea agregar a este usuario?", "Agregar",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (aswer == DialogResult.Yes)
+                    {
+                        administration.AddUser(user, user.CIF, user.Password);
+                        Clean();
+                        TbCif.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("La longitud del cif y la contraseña deben ser mayor de 4", "Error",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -305,6 +325,11 @@ namespace UamAcces.Formularios
         {
             ViewUser viewUser = new ViewUser();
             viewUser.Show();
+        }
+
+        private void BtmLimpiar_Click(object sender, EventArgs e)
+        {
+            Clean();
         }
     }
 }

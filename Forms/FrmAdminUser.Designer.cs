@@ -55,6 +55,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.BtmReturn = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.BtmLimpiar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -328,11 +329,22 @@
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // BtmLimpiar
+            // 
+            this.BtmLimpiar.Location = new System.Drawing.Point(24, 246);
+            this.BtmLimpiar.Name = "BtmLimpiar";
+            this.BtmLimpiar.Size = new System.Drawing.Size(100, 39);
+            this.BtmLimpiar.TabIndex = 40;
+            this.BtmLimpiar.Text = "Limpiar";
+            this.BtmLimpiar.UseVisualStyleBackColor = true;
+            this.BtmLimpiar.Click += new System.EventHandler(this.BtmLimpiar_Click);
+            // 
             // AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 629);
+            this.Controls.Add(this.BtmLimpiar);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.BtmReturn);
             this.Controls.Add(this.TbPassword);
@@ -396,5 +408,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button BtmReturn;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button BtmLimpiar;
     }
 }

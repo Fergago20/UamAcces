@@ -66,7 +66,16 @@ namespace UamAcces.Formularios
 
         private void BtmClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("¿Seguro que desea salir?", "Salida", MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Input input = new Input();
+                input.ShowDialog();
+                this.Close();
+            }
+            
         }
     }
 }

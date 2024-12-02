@@ -141,13 +141,18 @@ namespace UamAcces.Formularios
 
         private void BtmDelete_Click(object sender, EventArgs e)
         {
-            int cif = int.Parse(TbCif.Text);
+            
             try
             {
-                DialogResult answer = MessageBox.Show("¿Seguro desea eliminar a este usuario?", "Eliminar",
-                     MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (answer == DialogResult.Yes)
-                { administration.DeleteUser(cif); Clean(); TbCif.Focus(); }
+                if (!string.IsNullOrEmpty(TbCif.Text))
+                {
+
+                    int cif = int.Parse(TbCif.Text);
+                    DialogResult answer = MessageBox.Show("¿Seguro desea eliminar a este usuario?", "Eliminar",
+                         MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (answer == DialogResult.Yes)
+                    { administration.DeleteUser(cif); Clean(); TbCif.Focus(); }
+                }
             }
             catch (Exception ex)
             {

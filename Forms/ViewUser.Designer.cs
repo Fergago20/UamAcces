@@ -151,6 +151,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "ViewUser";
             this.Text = "Todos los Usuarios";
             this.panel1.ResumeLayout(false);
